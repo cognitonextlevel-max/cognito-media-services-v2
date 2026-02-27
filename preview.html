@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognito AI | Exceptional by Design</title>
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900,1,2,3,4,5,7&f[]=satoshi@300,400,500,700&f[]=jet-brains-mono@400,500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --background: #000000;
+      --foreground: #ffffff;
+      --neon-cyan: #00FFFF;
+      --cyan-glow: rgba(0, 255, 255, 0.4);
+      --font-cabinet: "Cabinet Grotesk", sans-serif;
+      --font-satoshi: "Satoshi", sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    html { background: #000; color: #fff; }
+
+    body {
+      background: #09090b;
+      color: #fff;
+      font-family: var(--font-satoshi);
+      margin: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    ::selection { background: rgba(0,255,255,0.2); color: #fff; }
+
+    /* GRAIN */
+    .grain {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 0, 0, 0.98);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      z-index: 40;
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-cabinet);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .nav-logo span {
+      color: var(--neon-cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-satoshi);
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--neon-cyan); }
+
+    .nav-cta {
+      font-family: var(--font-satoshi);
+      font-size: 13px;
+      font-weight: 600;
+      color: #000;
+      background: var(--neon-cyan);
+      border: none;
+      padding: 8px 20px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      background: radial-gradient(circle at 50% 50%, #001a1a 0%, #000000 80%);
+      background-image:
+        radial-gradient(circle at 50% 50%, #001a1a 0%, #000000 80%),
+        linear-gradient(rgba(0,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.02) 1px, transparent 1px);
+      background-size: auto, 80px 80px, 80px 80px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(0,255,255,0.2);
+      padding: 6px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--neon-cyan);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--neon-cyan);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-headline {
+      font-family: var(--font-cabinet);
+      font-weight: 900;
+      font-size: clamp(52px, 8vw, 96px);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 32px;
+      max-width: 900px;
+    }
+
+    .cyan-shimmer {
+      background: linear-gradient(90deg, #00FFFF 0%, #CCFFFF 50%, #00FFFF 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 8s linear infinite;
+      filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.25));
+    }
+
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    .hero-sub {
+      font-family: var(--font-satoshi);
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.45);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      font-family: var(--font-satoshi);
+      font-weight: 600;
+      font-size: 14px;
+      color: #000;
+      background: var(--neon-cyan);
+      border: none;
+      padding: 14px 32px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 60px rgba(0, 255, 255, 0.35);
+    }
+
+    .btn-ghost {
+      font-family: var(--font-satoshi);
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 14px 32px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(0,255,255,0.3);
+      color: var(--neon-cyan);
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      margin-top: 96px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--font-cabinet);
+      font-weight: 800;
+      font-size: 32px;
+      color: #fff;
+      letter-spacing: -0.03em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-family: var(--font-satoshi);
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* SECTION */
+    section {
+      padding: 120px 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--neon-cyan);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .section-headline {
+      font-family: var(--font-cabinet);
+      font-weight: 800;
+      font-size: clamp(36px, 4vw, 52px);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .section-body {
+      font-size: 16px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.75;
+      max-width: 480px;
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(0,255,255,0.06);
+      border: 1px solid rgba(0,255,255,0.06);
+      margin-top: 72px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+    }
+
+    .feature-card {
+      background: #09090b;
+      padding: 48px 40px;
+      transition: background 0.3s;
+    }
+
+    .feature-card:hover {
+      background: rgba(0, 255, 255, 0.02);
+    }
+
+    .feature-icon {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(0,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+
+    .feature-title {
+      font-family: var(--font-cabinet);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+    }
+
+    /* CODE BLOCK */
+    .code-block {
+      background: #050505;
+      border: 1px solid rgba(0,255,255,0.08);
+      padding: 32px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.6);
+      margin-top: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .code-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+      opacity: 0.4;
+    }
+
+    .code-comment { color: rgba(255,255,255,0.2); }
+    .code-key { color: var(--neon-cyan); }
+    .code-val { color: rgba(255,255,255,0.8); }
+
+    /* DIVIDER */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,255,255,0.1), transparent);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-logo {
+      font-family: var(--font-cabinet);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+      font-family: var(--font-mono);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">COGNITO<span>.</span>AI</div>
+    <ul class="nav-links">
+      <li><a href="#">Platform</a></li>
+      <li><a href="#">Capabilities</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Docs</a></li>
+    </ul>
+    <button class="nav-cta">Request Access</button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Neural Infrastructure · v2.4 Now Live</div>
+
+    <h1 class="hero-headline">
+      Intelligence<br/>
+      <span class="cyan-shimmer">Engineered</span><br/>
+      to Dominate
+    </h1>
+
+    <p class="hero-sub">
+      Crafting hyper-refined neural infrastructures for the global vanguard.
+      The benchmark for performance, precision, and privacy.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Begin Deployment →</a>
+      <a href="#" class="btn-ghost">View Architecture</a>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-num">99.99<span class="cyan-shimmer">%</span></span>
+        <span class="stat-label">Uptime SLA</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">&lt;12<span class="cyan-shimmer">ms</span></span>
+        <span class="stat-label">Avg Latency</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0<span class="cyan-shimmer">kb</span></span>
+        <span class="stat-label">Data Retained</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section>
+    <p class="section-label">// Core Capabilities</p>
+    <h2 class="section-headline">
+      Built for those who<br/>refuse to compromise
+    </h2>
+    <p class="section-body">
+      Every layer of Cognito is engineered to eliminate friction between intent and execution.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Sub-12ms Inference</div>
+        <p class="feature-desc">Distributed edge compute nodes ensure your requests resolve faster than human perception.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">Zero Data Retention</div>
+        <p class="feature-desc">Ephemeral processing architecture. Your inputs never persist beyond the active session.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <div class="feature-title">Precision Alignment</div>
+        <p class="feature-desc">Fine-tuned behavioral models calibrated to enterprise-grade accuracy thresholds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">∞</div>
+        <div class="feature-title">Infinite Context</div>
+        <p class="feature-desc">Proprietary memory architecture eliminates the context window as a limitation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◎</div>
+        <div class="feature-title">API-Native</div>
+        <p class="feature-desc">RESTful and streaming interfaces with SDKs for every major runtime environment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">▲</div>
+        <div class="feature-title">Sovereign Deployment</div>
+        <p class="feature-desc">On-premise, VPC, or air-gapped installation. Your infrastructure, your terms.</p>
+      </div>
+    </div>
+
+    <!-- CODE SNIPPET -->
+    <div class="code-block">
+      <span class="code-comment">// Initialize Cognito client</span><br/>
+      <span class="code-key">const</span> <span class="code-val">cognito</span> = <span class="code-key">new</span> <span class="code-val">CognitoAI</span>({<br/>
+      &nbsp;&nbsp;<span class="code-key">endpoint</span>: <span style="color:#00FFFF">'api.cognito.ai/v2'</span>,<br/>
+      &nbsp;&nbsp;<span class="code-key">model</span>: <span style="color:#00FFFF">'cortex-ultra'</span>,<br/>
+      &nbsp;&nbsp;<span class="code-key">latency</span>: <span style="color:#00FFFF">'realtime'</span>,<br/>
+      &nbsp;&nbsp;<span class="code-key">retention</span>: <span style="color:rgba(255,100,100,0.9)">'none'</span>,<br/>
+      });<br/><br/>
+      <span class="code-comment">// Stream a completion</span><br/>
+      <span class="code-key">const</span> <span class="code-val">stream</span> = <span class="code-key">await</span> <span class="code-val">cognito</span>.<span class="code-key">complete</span>({ <span class="code-key">prompt</span>: input });
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">COGNITO<span style="color:var(--neon-cyan)">.</span>AI</div>
+    <div class="footer-copy">© 2026 Cognito AI · Exceptional by Design</div>
+  </footer>
+
+</body>
+</html>

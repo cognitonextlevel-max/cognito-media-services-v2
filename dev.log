@@ -1,0 +1,11 @@
+
+> cognito-v2@0.1.0 dev
+> next dev
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.4.36:3000
+
+ ✓ Starting...
+ ✓ Ready in 795ms

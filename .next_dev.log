@@ -1,0 +1,73 @@
+
+> cognito-v2@0.1.0 dev
+> next dev
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.18.26:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1326ms
+ GET / 200 in 2.2s (compile: 2.0s, render: 180ms)
+ ○ Compiling /audit ...
+ GET /audit 200 in 4.1s (compile: 3.9s, render: 179ms)
+ GET /audit 200 in 800ms (compile: 429ms, render: 371ms)
+ GET / 200 in 222ms (compile: 102ms, render: 120ms)
+ GET / 200 in 319ms (compile: 209ms, render: 110ms)
+ GET / 200 in 178ms (compile: 108ms, render: 71ms)
+ GET / 200 in 175ms (compile: 93ms, render: 82ms)
+ GET / 200 in 133ms (compile: 74ms, render: 58ms)
+ GET / 200 in 289ms (compile: 200ms, render: 89ms)
+ GET / 200 in 116ms (compile: 58ms, render: 58ms)
+ GET / 200 in 457ms (compile: 97ms, render: 359ms)
+ GET / 200 in 57ms (compile: 22ms, render: 35ms)
+ GET / 200 in 27ms (compile: 11ms, render: 16ms)
+ GET /audit 200 in 40ms (compile: 23ms, render: 18ms)
+ GET / 200 in 358ms (compile: 197ms, render: 161ms)
+ GET / 200 in 61ms (compile: 23ms, render: 37ms)
+ ✓ Compiled in 1223ms
+ GET /audit 200 in 55ms (compile: 18ms, render: 37ms)
+ GET / 200 in 286ms (compile: 226ms, render: 60ms)
+ GET / 200 in 27ms (compile: 8ms, render: 19ms)
+ GET / 200 in 28ms (compile: 6ms, render: 21ms)
+ GET / 200 in 30ms (compile: 8ms, render: 22ms)
+ GET / 200 in 30ms (compile: 9ms, render: 21ms)
+ GET / 200 in 25ms (compile: 7ms, render: 18ms)
+ GET / 200 in 23ms (compile: 5ms, render: 18ms)
+ GET / 200 in 211ms (compile: 5ms, render: 206ms)
+ GET / 200 in 29ms (compile: 6ms, render: 23ms)
+ GET /audit 200 in 29ms (compile: 11ms, render: 18ms)
+ GET / 200 in 39ms (compile: 17ms, render: 23ms)
+ GET /audit 200 in 35ms (compile: 14ms, render: 21ms)
+ ✓ Compiled in 786ms
+ ✓ Compiled in 146ms
+ ✓ Compiled in 110ms
+ ✓ Compiled in 185ms
+ ✓ Compiled in 98ms
+ ✓ Compiled in 83ms
+ ✓ Compiled in 79ms
+ GET / 200 in 622ms (compile: 398ms, render: 224ms)
+ GET /audit 200 in 301ms (compile: 231ms, render: 70ms)
+ GET / 200 in 140ms (compile: 48ms, render: 91ms)
+ GET /audit 200 in 373ms (compile: 202ms, render: 171ms)
+ GET /audit 200 in 65ms (compile: 33ms, render: 32ms)
+ GET / 200 in 179ms (compile: 31ms, render: 148ms)
+ GET / 200 in 177ms (compile: 64ms, render: 113ms)
+ GET /audit 200 in 167ms (compile: 55ms, render: 112ms)
+New Lead Captured: {
+  leadName: 'es',
+  leadEmail: 'cognito.app@icloud.com',
+  leadPhone: '4699706943',
+  businessName: 'ci'
+}
+ POST /api/audit 200 in 74s (compile: 2.6s, render: 71s)
+ ✓ Compiled in 549ms
+ GET / 200 in 899ms (compile: 613ms, render: 286ms)
+ GET / 200 in 709ms (compile: 509ms, render: 200ms)
+ GET /audit 200 in 171ms (compile: 49ms, render: 122ms)
+ GET / 200 in 206ms (compile: 39ms, render: 168ms)
+ GET / 200 in 96ms (compile: 10ms, render: 86ms)
+ GET / 200 in 289ms (compile: 22ms, render: 268ms)
+ GET / 200 in 1069ms (compile: 647ms, render: 422ms)
