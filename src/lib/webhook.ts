@@ -1,7 +1,10 @@
 export async function sendWebhookLead(data: any) {
-  const webhookUrl = "https://hook.us2.make.com/d6d7v3cnyw11h2y4y4yovs8jlyhpsnjm";
-  
-  if (!webhookUrl) return;
+  const webhookUrl = process.env.MAKE_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    console.warn("MAKE_WEBHOOK_URL is not configured.");
+    return;
+  }
 
   try {
     const payload = {
@@ -17,7 +20,7 @@ export async function sendWebhookLead(data: any) {
       },
       body: JSON.stringify(payload),
     });
-    
+
     // We don't want to break the audit flow if webhook fails, just log it.
     if (!response.ok) {
       console.error("Webhook submission failed:", response.statusText);
