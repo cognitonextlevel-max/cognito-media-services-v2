@@ -64,9 +64,9 @@ export const Footer = () => {
           <div className="text-right flex flex-col items-end">
             <span className="block text-[10px] font-mono text-zinc-700 uppercase tracking-[0.5em] mb-8">Network</span>
             <div className="flex gap-8">
-              <Link href="https://x.com/demarkuss1" target="_blank" rel="noopener noreferrer"><Twitter className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
-              <Link href="#"><Github className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
-              <Link href="https://www.linkedin.com/in/demarkuss-day-a1202b20/" target="_blank" rel="noopener noreferrer"><Linkedin className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
+              <Link href="https://x.com/demarkuss1" target="_blank" rel="noopener noreferrer" aria-label="Follow Demarkuss on Twitter (X)"><Twitter className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
+              <Link href="#" aria-label="Visit Cognito Media on GitHub"><Github className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
+              <Link href="https://www.linkedin.com/in/demarkuss-day-a1202b20/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Demarkuss on LinkedIn"><Linkedin className="text-zinc-600 hover:text-cyan-400 transition-colors text-xl" /></Link>
             </div>
           </div>
         </div>

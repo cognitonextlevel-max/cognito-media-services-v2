@@ -84,7 +84,7 @@ export const Services = () => {
                         className="text-[11.5vw] sm:text-6xl md:text-8xl font-cabinet font-black uppercase mb-12 break-words"
                     >
                         THE 4 SYSTEMS <br />
-                        <span className="text-zinc-600 font-black italic">FOR SCALING</span> <br />
+                        <span className="text-zinc-400 font-black italic">FOR SCALING</span> <br />
                         <span className="text-white">YOUR BUSINESS</span><span className="text-cyan-400">.</span>
                     </motion.h2>
                 </div>
@@ -119,11 +119,11 @@ export const Services = () => {
                                         <service.icon className="w-8 h-8 text-zinc-500 group-hover:text-cyan-400 transition-colors duration-500 relative z-10" />
                                     </div>
                                     <div className="flex flex-col items-end">
-                                        <span className="text-[10px] font-mono text-zinc-600 tracking-[0.3em] font-bold uppercase mb-1">
+                                        <span className="text-[10px] font-mono text-zinc-400 tracking-[0.3em] font-bold uppercase mb-1">
                                             MODULE {String(idx + 1).padStart(2, '0')}
                                         </span>
-                                        <span className="flex items-center gap-2 text-[9px] font-mono text-zinc-700 group-hover:text-cyan-400/80 transition-colors uppercase tracking-widest">
-                                            <span className="inline-block w-1 h-3 bg-zinc-800 group-hover:bg-cyan-400 transition-colors animate-pulse"></span>
+                                        <span className="flex items-center gap-2 text-[9px] font-mono text-zinc-400 group-hover:text-cyan-400/80 transition-colors uppercase tracking-widest">
+                                            <span className="inline-block w-1 h-3 bg-zinc-600 group-hover:bg-cyan-400 transition-colors animate-pulse"></span>
                                             Status: Active
                                         </span>
                                     </div>
@@ -132,9 +132,9 @@ export const Services = () => {
                                 <span className="block text-[11px] font-mono text-zinc-500 group-hover:text-cyan-400 tracking-[0.4em] uppercase mb-4 font-bold transition-colors duration-500">
                                     {service.subtitle}
                                 </span>
-                                <h4 className="text-4xl md:text-5xl font-cabinet font-black mb-8 uppercase text-white group-hover:text-white transition-colors">
+                                <h3 className="text-4xl md:text-5xl font-cabinet font-black mb-8 uppercase text-white group-hover:text-white transition-colors">
                                     {service.title}
-                                </h4>
+                                </h3>
                                 <p className="text-zinc-400 group-hover:text-zinc-300 text-lg leading-relaxed mb-16 transition-colors duration-500 flex-grow font-light">
                                     {service.description}
                                 </p>
@@ -145,7 +145,7 @@ export const Services = () => {
 
                                     {service.stats.map((stat, sIdx) => (
                                         <div key={sIdx} className="flex justify-between items-center font-mono text-[11px] tracking-[0.2em] uppercase bg-black/40 p-3 border border-zinc-900 group-hover:border-zinc-800 transition-colors duration-500">
-                                            <span className="text-zinc-600 group-hover:text-zinc-400 transition-colors">{stat.label}</span>
+                                            <span className="text-zinc-400 group-hover:text-zinc-300 transition-colors">{stat.label}</span>
                                             <span className="text-zinc-300 group-hover:text-cyan-400 transition-colors font-bold tracking-widest">{stat.value}</span>
                                         </div>
                                     ))}

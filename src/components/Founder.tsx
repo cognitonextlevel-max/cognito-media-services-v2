@@ -65,7 +65,7 @@ export const Founder = () => {
                             Executive Directive
                         </span>
                         <h2 className="text-4xl md:text-6xl font-cabinet font-black leading-[1.1] mb-12 uppercase text-white">
-                            BUILT IN <span className="italic text-zinc-600 transition-colors duration-1000">THE FIELD.</span> <br />
+                            BUILT IN <span className="italic text-zinc-400 transition-colors duration-1000">THE FIELD.</span> <br />
                             SCALED WITH LOGIC.
                         </h2>
                         <div className="space-y-12">
@@ -74,30 +74,30 @@ export const Founder = () => {
                             </p>
 
                             <div className="py-8 border-y border-zinc-900 bg-black/30">
-                                <h3 className="flex items-center gap-3 font-mono text-[10px] text-zinc-500 uppercase tracking-[0.3em] mb-6 font-bold">
-                                    <div className="w-1.5 h-1.5 bg-zinc-700"></div>
+                                <h3 className="flex items-center gap-3 font-mono text-[10px] text-zinc-400 uppercase tracking-[0.3em] mb-6 font-bold">
+                                    <div className="w-1.5 h-1.5 bg-zinc-600"></div>
                                     Systems Built for Scale
                                 </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative text-zinc-500">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative text-zinc-400">
                                     <div className="p-5 bg-black border border-zinc-900 group relative overflow-hidden hover:border-zinc-700 transition-colors">
                                         <div className="w-1 h-full bg-cyan-400 absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                         <span className="block text-zinc-200 font-cabinet font-bold uppercase tracking-wide mb-1 text-sm group-hover:text-cyan-400 transition-colors">Service Operations</span>
-                                        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.2em] block">Logic for leaders</span>
+                                        <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-[0.2em] block">Logic for leaders</span>
                                     </div>
                                     <div className="p-5 bg-black border border-zinc-900 group relative overflow-hidden hover:border-zinc-700 transition-colors">
                                         <div className="w-1 h-full bg-cyan-400 absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                         <span className="block text-zinc-200 font-cabinet font-bold uppercase tracking-wide mb-1 text-sm group-hover:text-cyan-400 transition-colors">Real Estate</span>
-                                        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.2em] block">Automated workflows</span>
+                                        <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-[0.2em] block">Automated workflows</span>
                                     </div>
                                     <div className="p-5 bg-black border border-zinc-900 group relative overflow-hidden hover:border-zinc-700 transition-colors">
                                         <div className="w-1 h-full bg-cyan-400 absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                         <span className="block text-zinc-200 font-cabinet font-bold uppercase tracking-wide mb-1 text-sm group-hover:text-cyan-400 transition-colors">Short Term Rentals</span>
-                                        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.2em] block">Process management</span>
+                                        <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-[0.2em] block">Process management</span>
                                     </div>
                                     <div className="p-5 bg-black border border-zinc-900 group relative overflow-hidden hover:border-zinc-700 transition-colors">
                                         <div className="w-1 h-full bg-cyan-400 absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                         <span className="block text-zinc-200 font-cabinet font-bold uppercase tracking-wide mb-1 text-sm group-hover:text-cyan-400 transition-colors">Small Business OS</span>
-                                        <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.2em] block">System documentation</span>
+                                        <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-[0.2em] block">System documentation</span>
                                     </div>
                                 </div>
                             </div>
@@ -109,10 +109,10 @@ export const Founder = () => {
                             <div className="pt-8 relative flex items-center gap-6">
                                 <div>
                                     <span className="block text-white font-cabinet font-bold uppercase tracking-[0.2em] text-xl mb-1">DeMarkuss Day</span>
-                                    <span className="block text-zinc-600 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">Founder, Cognito Media & Business Solutions</span>
+                                    <span className="block text-zinc-400 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">Founder, Cognito Media & Business Solutions</span>
                                 </div>
                                 <div className="h-[40px] w-[1px] bg-zinc-800"></div>
-                                <div className="font-mono text-[9px] text-zinc-700 uppercase tracking-widest text-right">
+                                <div className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest text-right">
                                     AUTH: VERIFIED<br />
                                     LVL: OMEGA
                                 </div>
