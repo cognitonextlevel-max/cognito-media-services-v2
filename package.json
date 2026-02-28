@@ -36,5 +36,5 @@
     "eslint-config-next": "^16.1.6",
     "typescript": "^5.7.3"
   },
-  "vercel-force-redeploy": "2026-02-27T18:05"
+  "vercel-force-redeploy": "2026-02-28T12:05"
 }
