@@ -83,7 +83,7 @@ export const Intelligence = () => {
               className="text-[12vw] sm:text-7xl md:text-[100px] lg:text-[130px] font-cabinet font-black leading-none mb-12 uppercase break-words"
             >
               OPERATIONAL <br />
-              <span className="text-zinc-600 italic">PRECISION</span> <br />
+              <span className="text-zinc-400 italic">PRECISION</span> <br />
               <span className="text-white">ENGINE</span><span className="text-cyan-400">.</span>
             </motion.h2>
           </div>
@@ -134,7 +134,7 @@ export const Intelligence = () => {
                   <div className="p-4 bg-black border border-zinc-800 group-hover:border-cyan-400 group-hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] transition-all duration-500">
                     <node.icon className="w-8 h-8 text-zinc-500 group-hover:text-cyan-400 transition-all duration-700" />
                   </div>
-                  <span className="text-[12px] font-mono text-zinc-700 group-hover:text-cyan-400 transition-colors font-bold tracking-widest text-right">
+                  <span className="text-[12px] font-mono text-zinc-400 group-hover:text-cyan-400 transition-colors font-bold tracking-widest text-right">
                     NODE // 0{idx + 1}
                   </span>
                 </div>
@@ -142,9 +142,9 @@ export const Intelligence = () => {
                 <span className="block text-[11px] font-mono text-zinc-500 tracking-[0.5em] uppercase mb-4 font-bold group-hover:text-cyan-400 transition-colors">
                   {node.subtitle}
                 </span>
-                <h4 className="text-3xl md:text-4xl font-cabinet font-black mb-6 uppercase text-white group-hover:text-white transition-colors">
+                <h3 className="text-3xl md:text-4xl font-cabinet font-black mb-6 uppercase text-white group-hover:text-white transition-colors">
                   {node.title}
-                </h4>
+                </h3>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-16 group-hover:text-zinc-300 transition-colors flex-grow font-light">
                   {node.description}
                 </p>
@@ -152,7 +152,7 @@ export const Intelligence = () => {
                 <div className="space-y-4 pt-8 border-t border-zinc-900 mt-auto">
                   {node.stats.map((stat, sIdx) => (
                     <div key={sIdx} className="flex justify-between items-center font-mono text-[10px] tracking-[0.3em] uppercase bg-black/50 p-3 border border-zinc-900 group-hover:border-zinc-800 transition-colors">
-                      <span className="text-zinc-600 group-hover:text-zinc-400 transition-colors">{stat.label}</span>
+                      <span className="text-zinc-400 group-hover:text-zinc-300 transition-colors">{stat.label}</span>
                       <span className="text-zinc-400 group-hover:text-cyan-400 transition-colors font-bold">{stat.value}</span>
                     </div>
                   ))}

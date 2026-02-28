@@ -93,7 +93,7 @@ Provide a highly structured, authoritative, and actionable audit. Format your re
     } catch (error: any) {
         console.error('Audit API Error:', error);
         return NextResponse.json(
-            { error: error?.message || 'Failed to generate audit.' },
+            { error: 'An unexpected internal error occurred. Please try again later.' },
             { status: 500 }
         );
     }
