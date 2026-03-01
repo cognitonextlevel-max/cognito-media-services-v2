@@ -1,31 +1,51 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import { Terminal, Shield, Cpu, Activity, Calendar } from "lucide-react";
+import { Terminal, Shield, Cpu, Activity, Calendar, Menu, X } from "lucide-react";
 import { CognitoLogo } from "./ui/CognitoLogo";
 
 export const Navigation = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed bottom-6 sm:bottom-12 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-0 sm:gap-1 p-1 sm:p-2 bg-black/80 backdrop-blur-2xl border border-white/10 rounded-full ultra-glow shadow-2xl shadow-cyan-400/10 w-[95%] sm:w-auto max-w-[450px] justify-between sm:justify-center">
-      <NavItem href="#system" icon={Activity} label="Manifesto" />
-      <NavItem href="/audit" icon={Calendar} label="Site Audit" />
-      <div className="hidden sm:block w-px h-6 bg-white/10 mx-1 sm:mx-3" />
-      <Link href="/">
-        <motion.div
-          whileHover={{ scale: 1.05, backgroundColor: "#00FFFF", color: "#000" }}
-          whileTap={{ scale: 0.95 }}
-          className="mx-1 sm:mx-0 px-4 sm:px-8 py-2.5 sm:py-3 bg-zinc-900 border border-white/10 text-zinc-300 text-[10px] font-black tracking-[0.2em] uppercase rounded-full transition-all duration-300 flex items-center gap-2 group whitespace-nowrap"
-        >
-          <CognitoLogo className="w-4 h-4 text-cyan-400 group-hover:text-black transition-colors duration-300" pulse={true} />
-          COGNITO
-        </motion.div>
-      </Link>
-      <div className="hidden sm:block w-px h-6 bg-white/10 mx-1 sm:mx-3" />
-      <NavItem href="#services" icon={Terminal} label="System Engine" />
-      <NavItem href="#connect" icon={Shield} label="Network" />
-    </nav>
+    <>
+      {/* Desktop Navigation - unchanged */}
+      <nav className="fixed bottom-6 sm:bottom-12 left-1/2 -translate-x-1/2 z-[100] hidden sm:flex items-center gap-1 p-2 bg-black/80 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl shadow-cyan-400/5">
+        <NavItem href="#system" icon={Activity} label="Philosophy" />
+        <NavItem href="#audit" icon={Calendar} label="Audit" />
+        <div className="w-px h-6 bg-white/10 mx-3" />
+        <Link href="/">
+          <motion.div
+            whileHover={{ scale: 1.05, backgroundColor: "#00FFFF", color: "#000" }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-zinc-900 border border-white/10 text-zinc-300 text-[10px] font-black tracking-[0.2em] uppercase rounded-full transition-all duration-300 flex items-center gap-2 group whitespace-nowrap"
+          >
+            <CognitoLogo className="w-4 h-4 text-cyan-400 group-hover:text-black transition-colors duration-300" pulse={false} />
+            COGNITO
+          </motion.div>
+        </Link>
+        <div className="w-px h-6 bg-white/10 mx-3" />
+        <NavItem href="#services" icon={Terminal} label="Solutions" />
+        <NavItem href="#intelligence" icon={Cpu} label="Growth" />
+      </nav>
+
+      {/* Mobile Navigation - Bottom Bar */}
+      <nav className="fixed bottom-0 left-0 right-0 z-[100] sm:hidden bg-black/90 backdrop-blur-2xl border-t border-white/10 safe-area-bottom">
+        <div className="flex items-center justify-around py-2 px-2">
+          <MobileNavItem href="#system" icon={Activity} label="Philosophy" />
+          <MobileNavItem href="#audit" icon={Calendar} label="Audit" />
+          <Link href="/" className="flex flex-col items-center gap-1 px-3 py-1.5">
+            <div className="w-10 h-10 bg-zinc-900 border border-white/10 rounded-full flex items-center justify-center">
+              <CognitoLogo className="w-4 h-4 text-cyan-400" pulse={false} />
+            </div>
+          </Link>
+          <MobileNavItem href="#services" icon={Terminal} label="Solutions" />
+          <MobileNavItem href="#intelligence" icon={Cpu} label="Growth" />
+        </div>
+      </nav>
+    </>
   );
 };
 
@@ -40,5 +60,14 @@ const NavItem = ({ href, icon: Icon, label }: { href: string; icon: any; label: 
         {label}
       </span>
     </motion.div>
+  </Link>
+);
+
+const MobileNavItem = ({ href, icon: Icon, label }: { href: string; icon: any; label: string }) => (
+  <Link href={href} className="flex flex-col items-center gap-1 px-2 py-1.5 min-w-[56px]">
+    <Icon className="w-5 h-5 text-zinc-500" />
+    <span className="text-[8px] font-mono uppercase tracking-wider text-zinc-600 leading-none">
+      {label}
+    </span>
   </Link>
 );

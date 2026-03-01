@@ -42,7 +42,7 @@
     font-weight: 900 !important;
     font-feature-settings: "kern" 1, "liga" 1;
     font-variation-settings: "wght" 900;
-    letter-spacing: normal !important;
+    letter-spacing: -0.02em !important;
     font-optical-sizing: none;
     line-height: 1.1;
   }
@@ -111,5 +111,24 @@
 
   .ultra-glow {
     box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Mobile tap highlight removal */
+@media (max-width: 639px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 16px;
+    /* Prevents iOS zoom on focus */
   }
 }

@@ -65,7 +65,7 @@ export const VoiceAgent = () => {
     if (!isLoaded) return null;
 
     return (
-        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-3">
+        <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-[99] flex flex-col items-end gap-3">
             {isActive && (
                 <div className="px-3 py-1.5 bg-zinc-950 border border-cyan-400/30 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(0,255,255,0.1)]">
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></div>
@@ -78,7 +78,7 @@ export const VoiceAgent = () => {
             <button
                 onClick={toggleAgent}
                 disabled={isLoading}
-                className={`relative group flex items-center justify-center w-14 h-14 rounded-full transition-all duration-500 overflow-hidden border ${isActive
+                className={`relative group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full transition-all duration-500 overflow-hidden border ${isActive
                     ? "bg-cyan-900/20 border-cyan-400/50 shadow-[0_0_30px_rgba(0,255,255,0.2)]"
                     : "bg-zinc-950 border-zinc-800 hover:border-cyan-400/30 hover:bg-zinc-900"
                     }`}
