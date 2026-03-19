@@ -64,9 +64,9 @@ const NavItem = ({ href, icon: Icon, label }: { href: string; icon: any; label: 
 );
 
 const MobileNavItem = ({ href, icon: Icon, label }: { href: string; icon: any; label: string }) => (
-  <Link href={href} className="flex flex-col items-center gap-1 px-2 py-1.5 min-w-[56px]">
-    <Icon className="w-5 h-5 text-zinc-500" />
-    <span className="text-[8px] font-mono uppercase tracking-wider text-zinc-600 leading-none">
+  <Link href={href} className="flex flex-col items-center gap-1 px-2 py-1.5 min-w-[56px] active:opacity-60 transition-opacity">
+    <Icon className="w-5 h-5 text-zinc-400" />
+    <span className="text-[8px] font-mono uppercase tracking-wider text-zinc-500 leading-none">
       {label}
     </span>
   </Link>

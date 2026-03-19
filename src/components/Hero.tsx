@@ -7,7 +7,7 @@ import { SystemGrid } from "./SystemGrid";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-black overflow-hidden selection:bg-cyan-500/30">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-black overflow-hidden selection:bg-cyan-500/30 pb-24 sm:pb-0">
       {/* Precision Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 hero-gradient opacity-100"></div>

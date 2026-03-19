@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 import { VoiceAgent } from "@/components/VoiceAgent";
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="relative min-h-screen bg-black pb-20 sm:pb-0">
       <Navigation />
       <Hero />
       <Philosophy />

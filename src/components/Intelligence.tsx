@@ -39,7 +39,7 @@ const nodes = [
 
 export const Intelligence = () => {
   return (
-    <section id="intelligence" className="relative py-24 sm:py-40 md:py-72 bg-black overflow-hidden border-t border-zinc-900">
+    <section id="intelligence" className="relative py-24 sm:py-40 md:py-56 bg-black overflow-hidden border-t border-zinc-900">
       {/* Decorative Blueprint Background */}
       <div className="absolute inset-0 grid-blueprint opacity-10 pointer-events-none"></div>
 
@@ -80,7 +80,7 @@ export const Intelligence = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-[100px] xl:text-[130px] font-cabinet font-black leading-none mb-8 sm:mb-12 uppercase break-words"
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-[100px] xl:text-[130px] font-cabinet font-black leading-none mb-8 sm:mb-12 uppercase break-words overflow-hidden"
             >
               OPERATIONAL <br />
               <span className="text-zinc-400 italic">PRECISION</span> <br />

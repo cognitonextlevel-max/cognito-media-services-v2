@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer id="connect" className="relative py-20 sm:py-28 md:py-40 px-4 sm:px-8 md:px-16 border-t border-zinc-950 bg-black overflow-hidden pb-28 sm:pb-20 md:pb-40">
+    <footer id="connect" className="relative py-20 sm:py-28 md:py-40 px-4 sm:px-8 md:px-16 border-t border-zinc-950 bg-black overflow-hidden pb-32 sm:pb-20 md:pb-40">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <motion.div
           initial={{ rotate: 45, scale: 0.9, opacity: 0 }}
