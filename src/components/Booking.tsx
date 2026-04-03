@@ -10,8 +10,12 @@ import { ScrambleText } from "./ScrambleText";
 export const Booking = () => {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ "namespace": "assessment" });
-      cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+      try {
+        const cal = await getCalApi({ "namespace": "assessment" });
+        cal("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+      } catch {
+        // Cal.com embed failed to load — button still works via data attributes
+      }
     })();
   }, []);
 
