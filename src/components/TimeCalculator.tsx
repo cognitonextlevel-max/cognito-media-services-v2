@@ -6,33 +6,34 @@ import Link from "next/link";
 
 export const TimeCalculator = () => {
   return (
-    <section id="diagnostic" className="relative py-48 bg-black overflow-hidden border-t border-zinc-900">
-      <div className="absolute inset-0 grid-blueprint opacity-10 pointer-events-none"></div>
+    <section className="relative section-padding bg-black overflow-hidden border-t border-zinc-900/50">
+      <div className="absolute inset-0 grid-blueprint opacity-8 pointer-events-none" />
+      {/* Centered glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-cyan-900/[0.06] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-6 md:px-24 relative z-10 flex flex-col items-center text-center">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center gap-6 mb-12"
+          className="flex items-center justify-center gap-4 mb-10 sm:mb-14"
         >
-          <div className="flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-sm">
-            <div className="w-1.5 h-1.5 bg-cyan-400"></div>
-            <span className="text-[10px] font-mono uppercase tracking-[0.5em] text-zinc-400 font-bold">
-              System Assessment
-            </span>
+          <div className="flex items-center gap-2.5 px-4 py-1.5 bg-zinc-900/50 border border-zinc-800/50 rounded-full">
+            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+            <span className="section-label">System Assessment</span>
           </div>
         </motion.div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-cabinet font-black uppercase leading-[1] mb-10 text-white"
+          transition={{ duration: 1, ease: [0.19, 1, 0.22, 1] }}
+          className="text-display font-cabinet font-black uppercase leading-[0.9] mb-8 sm:mb-12 tracking-tighter"
         >
-          BUSINESS <br />
-          <span className="text-cyan-400 italic">DIAGNOSTIC</span><span className="text-white">.</span>
+          BUSINESS{" "}
+          <span className="cyan-shimmer italic">DIAGNOSTIC</span>
+          <span className="text-cyan-400 glow-text">.</span>
         </motion.h2>
 
         <motion.p
@@ -40,20 +41,25 @@ export const TimeCalculator = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 1 }}
-          className="text-xl md:text-2xl text-zinc-400 font-light leading-relaxed mb-16 max-w-2xl text-balance"
+          className="text-body-lg text-zinc-500 font-light leading-relaxed mb-12 sm:mb-16 max-w-lg mx-auto"
         >
-          Run a structural analysis of your company to identify misalignment, bottlenecks, and leverage gaps.
+          Run a structural analysis of your company to identify misalignment, bottlenecks, and leverage gaps.{" "}
+          <span className="text-white font-medium">Free. 30 minutes. Zero pressure.</span>
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
         >
-          <Link href="#audit" className="group relative inline-flex items-center justify-center px-12 py-5 bg-black border border-zinc-800 hover:border-cyan-400 text-zinc-300 hover:text-cyan-400 text-[12px] font-mono font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:bg-cyan-950/20 shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,255,255,0.1)]">
+          <Link
+            href="#audit"
+            data-magnetic
+            className="group relative inline-flex items-center justify-center px-10 sm:px-14 py-4 sm:py-5 bg-black border border-zinc-800/50 hover:border-cyan-400/40 text-zinc-400 hover:text-cyan-400 text-caption font-mono font-bold uppercase tracking-[0.4em] transition-all duration-500 hover:bg-cyan-950/10 hover:shadow-[0_0_40px_rgba(0,255,255,0.08)] rounded-sm"
+          >
             Run Diagnostic
-            <ArrowRight size={16} className="ml-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="ml-4 group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>

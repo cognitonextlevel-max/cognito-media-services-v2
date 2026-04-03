@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Hexagon, Network, ShieldCheck, Target, Zap } from "lucide-react";
+import { ArrowUpRight, Hexagon, Network, Target, Zap } from "lucide-react";
 import Link from "next/link";
+import { ScrambleText } from "./ScrambleText";
+import { TiltCard } from "./TiltCard";
 
 const nodes = [
   {
@@ -75,17 +77,12 @@ export const Intelligence = () => {
               </span>
             </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2 }}
+            <ScrambleText
+              text="OPERATIONAL PRECISION ENGINE."
+              as="h2"
               className="text-4xl sm:text-5xl md:text-7xl lg:text-[100px] xl:text-[130px] font-cabinet font-black leading-none mb-8 sm:mb-12 uppercase break-words overflow-hidden"
-            >
-              OPERATIONAL <br />
-              <span className="text-zinc-400 italic">PRECISION</span> <br />
-              <span className="text-white">ENGINE</span><span className="text-cyan-400">.</span>
-            </motion.h2>
+              speed={30}
+            />
           </div>
 
           <motion.div
@@ -115,7 +112,7 @@ export const Intelligence = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.19, 1, 0.22, 1] }}
               className={`group relative p-6 sm:p-10 md:p-12 lg:p-16 overflow-hidden flex flex-col transition-all duration-700 hover:bg-[#0a0a0a] border-zinc-900
                 ${idx !== nodes.length - 1 ? 'border-b lg:border-b-0 lg:border-r' : ''}`}
             >

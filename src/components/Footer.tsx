@@ -3,76 +3,88 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import { CognitoLogo } from "./ui/CognitoLogo";
 
 export const Footer = () => {
   return (
-    <footer id="connect" className="relative py-20 sm:py-28 md:py-40 px-4 sm:px-8 md:px-16 border-t border-zinc-950 bg-black overflow-hidden pb-32 sm:pb-20 md:pb-40">
-      <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-        <motion.div
-          initial={{ rotate: 45, scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          whileHover={{ rotate: 135, scale: 1.1, borderColor: "rgba(0, 255, 255, 0.4)" }}
-          className="w-16 h-16 sm:w-24 sm:h-24 border border-cyan-950 flex items-center justify-center mb-12 sm:mb-20 rotate-45 group transition-all duration-1000"
-        >
-          <div className="w-8 h-8 sm:w-12 sm:h-12 border border-cyan-400/20 animate-pulse flex items-center justify-center">
-            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-cyan-400 shadow-[0_0_15px_rgba(0,255,255,1)]"></div>
-          </div>
-        </motion.div>
+    <footer className="relative py-16 sm:py-24 md:py-32 px-5 sm:px-8 md:px-12 lg:px-24 border-t border-zinc-900/30 bg-black overflow-hidden pb-32 sm:pb-24">
+      {/* Subtle background */}
+      <div className="absolute inset-0 grid-blueprint opacity-5 pointer-events-none" />
 
-        <motion.h2
-          initial={{ opacity: 0.1, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 1 }}
-          className="text-3xl sm:text-4xl md:text-6xl font-cabinet font-black mb-10 sm:mb-16 tracking-[-0.03em] uppercase text-center max-w-4xl"
-        >
-          Deploy <span className="text-cyan-400 block mt-2">Cognito Media & Business Solutions</span>
-        </motion.h2>
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Top — Logo + CTA */}
+        <div className="flex flex-col items-center text-center mb-16 sm:mb-24">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
+            <CognitoLogo className="w-12 h-12 sm:w-16 sm:h-16 text-cyan-400/30 mb-10 sm:mb-14" pulse={false} />
+          </motion.div>
 
-        <Link
-          href="mailto:systems@cognitomedia.com"
-          className="text-base sm:text-xl md:text-3xl font-mono text-zinc-600 hover:text-cyan-400 transition-all underline underline-offset-[8px] sm:underline-offset-[16px] decoration-zinc-900 hover:decoration-cyan-400/40 tracking-wider sm:tracking-widest group break-all sm:break-normal"
-        >
-          systems.<span className="group-hover:text-white transition-colors">cognitomedia</span>.com
-        </Link>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-heading font-cabinet font-black uppercase tracking-tighter mb-8 sm:mb-12 max-w-2xl"
+          >
+            Deploy <span className="cyan-shimmer block mt-1">Cognito</span>
+          </motion.h2>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 md:gap-16 mt-20 sm:mt-32 md:mt-48 pt-10 sm:pt-16 md:pt-20 border-t border-zinc-900/40">
-          <div className="text-left">
-            <span className="block text-[9px] sm:text-[10px] font-mono text-zinc-700 uppercase tracking-[0.3em] sm:tracking-[0.5em] mb-4 sm:mb-8">Logic Points</span>
-            <ul className="text-[10px] sm:text-[11px] text-zinc-500 space-y-3 sm:space-y-4 font-light">
-              <li className="hover:text-cyan-400 transition-colors cursor-pointer">Service Operations</li>
-              <li className="hover:text-cyan-400 transition-colors cursor-pointer">Real Estate Assets</li>
-              <li className="hover:text-cyan-400 transition-colors cursor-pointer">SOP Infrastructure</li>
+          <Link
+            href="mailto:systems@cognitomedia.com"
+            className="text-body-lg sm:text-subheading font-mono text-zinc-700 hover:text-cyan-400 transition-all duration-500 underline underline-offset-8 decoration-zinc-900/50 hover:decoration-cyan-400/30 tracking-wider group break-all sm:break-normal"
+          >
+            systems<span className="text-zinc-800 group-hover:text-white transition-colors">@</span>cognitomedia.com
+          </Link>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 border-t border-zinc-900/20">
+          <div>
+            <span className="block section-label mb-5 sm:mb-6">Industries</span>
+            <ul className="text-caption text-zinc-600 space-y-3 font-light">
+              <li className="hover:text-cyan-400 transition-colors duration-500 cursor-pointer">Service Operations</li>
+              <li className="hover:text-cyan-400 transition-colors duration-500 cursor-pointer">Real Estate</li>
+              <li className="hover:text-cyan-400 transition-colors duration-500 cursor-pointer">Short Term Rentals</li>
             </ul>
           </div>
-          <div className="text-left">
-            <span className="block text-[9px] sm:text-[10px] font-mono text-zinc-700 uppercase tracking-[0.3em] sm:tracking-[0.5em] mb-4 sm:mb-8">Legal Trace</span>
-            <ul className="text-[10px] sm:text-[11px] text-zinc-500 space-y-3 sm:space-y-4 font-light">
-              <li><Link href="#" className="hover:text-cyan-400 transition-colors">Data Sovereignty</Link></li>
-              <li><Link href="#" className="hover:text-cyan-400 transition-colors">System Ethics</Link></li>
+          <div>
+            <span className="block section-label mb-5 sm:mb-6">Legal</span>
+            <ul className="text-caption text-zinc-600 space-y-3 font-light">
+              <li><Link href="#" className="hover:text-cyan-400 transition-colors duration-500">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-cyan-400 transition-colors duration-500">Terms of Service</Link></li>
             </ul>
           </div>
-          <div className="text-left">
-            <span className="block text-[9px] sm:text-[10px] font-mono text-zinc-700 uppercase tracking-[0.3em] sm:tracking-[0.5em] mb-4 sm:mb-8">System Health</span>
-            <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-[11px] text-zinc-500">
-              <div className="w-2 h-2 bg-cyan-400 shadow-[0_0_12px_#00FFFF] rounded-full animate-pulse shrink-0"></div>
-              Cognito Grid: Active
+          <div>
+            <span className="block section-label mb-5 sm:mb-6">Status</span>
+            <div className="flex items-center gap-3 text-caption text-zinc-600">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_10px_rgba(0,255,255,0.6)] animate-pulse shrink-0" />
+              All Systems Active
             </div>
           </div>
-          <div className="text-left sm:text-right flex flex-col sm:items-end">
-            <span className="block text-[9px] sm:text-[10px] font-mono text-zinc-700 uppercase tracking-[0.3em] sm:tracking-[0.5em] mb-4 sm:mb-8">Network</span>
-            <div className="flex gap-6 sm:gap-8">
-              <Link href="https://x.com/demarkuss1" target="_blank" rel="noopener noreferrer" aria-label="Follow Demarkuss on Twitter (X)"><Twitter className="text-zinc-600 hover:text-cyan-400 transition-colors text-lg sm:text-xl" /></Link>
-              <Link href="#" aria-label="Visit Cognito Media on GitHub"><Github className="text-zinc-600 hover:text-cyan-400 transition-colors text-lg sm:text-xl" /></Link>
-              <Link href="https://www.linkedin.com/in/demarkuss-day-a1202b20/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Demarkuss on LinkedIn"><Linkedin className="text-zinc-600 hover:text-cyan-400 transition-colors text-lg sm:text-xl" /></Link>
+          <div className="flex flex-col items-start md:items-end">
+            <span className="block section-label mb-5 sm:mb-6">Connect</span>
+            <div className="flex gap-5 sm:gap-6">
+              <Link href="https://x.com/demarkuss1" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Twitter size={16} className="text-zinc-700 hover:text-cyan-400 transition-colors duration-500" />
+              </Link>
+              <Link href="#" aria-label="GitHub">
+                <Github size={16} className="text-zinc-700 hover:text-cyan-400 transition-colors duration-500" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/demarkuss-day-a1202b20/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin size={16} className="text-zinc-700 hover:text-cyan-400 transition-colors duration-500" />
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 sm:mt-24 text-[8px] sm:text-[10px] font-mono text-zinc-800 tracking-[0.3em] sm:tracking-[0.6em] uppercase">
-          © 2026 Cognito Media & Business Solutions | Exceptional by Design
+        {/* Copyright */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <span className="text-[7px] sm:text-[8px] font-mono text-zinc-900 tracking-[0.5em] uppercase">
+            © {new Date().getFullYear()} Cognito Media & Business Solutions · Dallas, TX
+          </span>
         </div>
       </div>
     </footer>
