@@ -34,7 +34,7 @@ export function useTextScramble(text: string, options?: { speed?: number; trigge
 
       iteration++;
       if (iteration <= totalFrames) {
-        frame = window.setTimeout(() => requestAnimationFrame(scramble), speed);
+        frame = setTimeout(() => requestAnimationFrame(scramble), speed) as unknown as number;
       }
     };
 

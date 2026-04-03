@@ -6,6 +6,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 export const MagneticCursor = () => {
   const [visible, setVisible] = useState(false);
   const [hovering, setHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
@@ -14,8 +15,12 @@ export const MagneticCursor = () => {
   const y = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    // Only show on desktop
+    // Bail on mobile/touch devices
+    if (typeof window === "undefined") return;
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) return;
     if (window.matchMedia("(pointer: coarse)").matches) return;
+
+    setIsMobile(false);
 
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX);
@@ -28,21 +33,17 @@ export const MagneticCursor = () => {
 
     window.addEventListener("mousemove", move);
 
-    // Watch for hoverable elements
-    const observer = new MutationObserver(() => {
+    const attachListeners = () => {
       document.querySelectorAll("a, button, [data-magnetic]").forEach((el) => {
         el.addEventListener("mouseenter", handleHoverStart);
         el.addEventListener("mouseleave", handleHoverEnd);
       });
-    });
+    };
 
+    // Watch for new elements
+    const observer = new MutationObserver(attachListeners);
     observer.observe(document.body, { childList: true, subtree: true });
-
-    // Initial pass
-    document.querySelectorAll("a, button, [data-magnetic]").forEach((el) => {
-      el.addEventListener("mouseenter", handleHoverStart);
-      el.addEventListener("mouseleave", handleHoverEnd);
-    });
+    attachListeners();
 
     return () => {
       window.removeEventListener("mousemove", move);
@@ -50,7 +51,8 @@ export const MagneticCursor = () => {
     };
   }, [cursorX, cursorY]);
 
-  if (!visible) return null;
+  // Don't render anything on mobile or until visible
+  if (isMobile || !visible) return null;
 
   return (
     <>
