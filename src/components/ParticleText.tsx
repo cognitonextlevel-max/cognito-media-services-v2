@@ -134,13 +134,13 @@ export const ParticleText = ({ lines, fontSize = 120, className = "" }: Particle
 
         const mx = mouseRef.current.x;
         const my = mouseRef.current.y;
-        const mouseRadius = 100;
+        const mouseRadius = 180; // Large radius for dramatic effect
 
         for (const p of particlesRef.current) {
           const dx = p.targetX - p.x;
           const dy = p.targetY - p.y;
-          p.vx += dx * 0.06;
-          p.vy += dy * 0.06;
+          p.vx += dx * 0.05;
+          p.vy += dy * 0.05;
 
           const mdx = p.x - mx;
           const mdy = p.y - my;
@@ -149,8 +149,9 @@ export const ParticleText = ({ lines, fontSize = 120, className = "" }: Particle
           if (mDist < mouseRadius) {
             const force = (mouseRadius - mDist) / mouseRadius;
             const angle = Math.atan2(mdy, mdx);
-            p.vx += Math.cos(angle) * force * 8;
-            p.vy += Math.sin(angle) * force * 8;
+            // Strong explosion force
+            p.vx += Math.cos(angle) * force * 15;
+            p.vy += Math.sin(angle) * force * 15;
           }
 
           p.vx *= 0.88;
@@ -162,14 +163,23 @@ export const ParticleText = ({ lines, fontSize = 120, className = "" }: Particle
           ctx.fillRect(p.x, p.y, p.size, p.size);
         }
 
+        // Glow around cursor
         if (mx > 0 && my > 0) {
+          // Cursor glow
+          const gradient = ctx.createRadialGradient(mx, my, 0, mx, my, mouseRadius);
+          gradient.addColorStop(0, "rgba(0, 255, 255, 0.06)");
+          gradient.addColorStop(1, "rgba(0, 255, 255, 0)");
+          ctx.fillStyle = gradient;
+          ctx.fillRect(mx - mouseRadius, my - mouseRadius, mouseRadius * 2, mouseRadius * 2);
+
+          // Connection lines to nearby particles
           for (const p of particlesRef.current) {
             const d = Math.sqrt((p.x - mx) ** 2 + (p.y - my) ** 2);
-            if (d < 80 && p.color.includes("cyan")) {
+            if (d < 120) {
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(mx, my);
-              ctx.strokeStyle = `rgba(0, 255, 255, ${0.08 * (1 - d / 80)})`;
+              ctx.strokeStyle = `rgba(0, 255, 255, ${0.15 * (1 - d / 120)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -201,7 +211,7 @@ export const ParticleText = ({ lines, fontSize = 120, className = "" }: Particle
     <canvas
       ref={canvasRef}
       className={`w-full cursor-crosshair ${className}`}
-      style={{ height: `${Math.min(totalHeight, 500)}px` }}
+      style={{ height: `${Math.min(totalHeight, 500)}px`, position: "relative", zIndex: 10 }}
     />
   );
 };

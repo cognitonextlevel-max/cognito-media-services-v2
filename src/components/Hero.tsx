@@ -57,7 +57,7 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 2.3 }}
-            className="hidden md:block"
+            className="hidden md:block relative z-20"
           >
             <ParticleText
               lines={["THE UNFAIR", "SYSTEMS", "ADVANTAGE."]}
