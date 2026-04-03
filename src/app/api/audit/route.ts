@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         }
 
         if (record.count >= RATE_LIMIT_MAX) {
-            console.log(`Rate limit triggered for IP: ${ip}`);
+            // Rate limit exceeded
             return NextResponse.json(
                 { error: 'You have generated too many audits. Please try again later or contact us directly.' },
                 { status: 429 }

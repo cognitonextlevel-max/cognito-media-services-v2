@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.cognitoappsareus.com"),
   title: "Cognito Media & Business Solutions | #1 Business Automation Agency in Dallas, TX",
   description: "Dallas-Fort Worth's premier business automation agency. We build AI-powered systems, dominate local SEO, create high-converting websites, and deploy autonomous sales agents. 500+ businesses automated. Book your free strategic audit.",
   keywords: [
@@ -28,20 +29,11 @@ export const metadata: Metadata = {
     siteName: "Cognito Media & Business Solutions",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Cognito Media & Business Solutions — The Unfair Systems Advantage",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cognito Media & Business Solutions | The Unfair Systems Advantage",
     description: "AI-powered business automation. Local SEO. High-converting websites. Autonomous sales agents. Dallas-Fort Worth.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,

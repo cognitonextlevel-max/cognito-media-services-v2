@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s https://api.github.com/repos/somnai-dreams/pretext-demos/contents/)",
+      "Bash(curl -s https://raw.githubusercontent.com/chenglou/pretext/main/pages/demos/index.html)",
+      "Bash(curl -s https://raw.githubusercontent.com/somnai-dreams/pretext-demos/main/fluid-smoke.js)",
+      "Bash(curl -s https://raw.githubusercontent.com/somnai-dreams/pretext-demos/main/fluid-smoke.html)",
+      "Bash(curl -s https://raw.githubusercontent.com/somnai-dreams/pretext-demos/main/shrinkwrap-showdown.js)"
+    ]
+  }
+}
