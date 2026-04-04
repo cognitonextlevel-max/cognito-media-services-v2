@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Code, Search, Smartphone } from "lucide-react";
+import { Bot, Code, Cpu, Search, Smartphone } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import { ScrambleText } from "./ScrambleText";
+import Link from "next/link";
 
 const services = [
     {
@@ -45,6 +46,17 @@ const services = [
             { label: "FOLLOW-UP", value: "100% ACTIVE" },
             { label: "SALES", value: "AUTONOMOUS" }
         ]
+    },
+    {
+        title: "AI DEPLOYMENT",
+        subtitle: "ON-SITE SETUP",
+        description: "We come to your business, install custom AI agents and automation, and train your team to use them. Voice bots, sales agents, content engines — deployed in person.",
+        icon: Cpu,
+        stats: [
+            { label: "SETUP", value: "1-2 WEEKS" },
+            { label: "TRAINING", value: "INCLUDED" }
+        ],
+        href: "/ai"
     }
 ];
 
@@ -75,7 +87,7 @@ export const Services = () => {
                     </motion.div>
 
                     <ScrambleText
-                        text="THE 4 SYSTEMS FOR SCALING YOUR BUSINESS."
+                        text="THE 5 SYSTEMS FOR SCALING YOUR BUSINESS."
                         as="h2"
                         className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-cabinet font-black uppercase mb-8 sm:mb-12 break-words leading-[0.95] tracking-tighter"
                         speed={35}
@@ -83,7 +95,10 @@ export const Services = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 relative">
-                    {services.map((service, idx) => (
+                    {services.map((service, idx) => {
+                    const Wrapper = service.href ? Link : "div";
+                    const wrapperProps = service.href ? { href: service.href } : {};
+                    return (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 40 }}
@@ -91,8 +106,9 @@ export const Services = () => {
                             viewport={{ once: true, margin: "-5%" }}
                             transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.19, 1, 0.22, 1] }}
                         >
+                            <Wrapper {...wrapperProps as any}>
                             <TiltCard className="h-full">
-                                <div className="group relative p-6 sm:p-10 md:p-14 border border-zinc-900 overflow-hidden h-full flex flex-col transition-all duration-700 hover:border-cyan-500/40 hover:shadow-[0_0_60px_rgba(0,255,255,0.08)] cursor-default bg-[#050505]">
+                                <div className={`group relative p-6 sm:p-10 md:p-14 border border-zinc-900 overflow-hidden h-full flex flex-col transition-all duration-700 hover:border-cyan-500/40 hover:shadow-[0_0_60px_rgba(0,255,255,0.08)] ${service.href ? "cursor-pointer" : "cursor-default"} bg-[#050505]`}>
                                     {/* Hover Gradient */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
@@ -144,8 +160,10 @@ export const Services = () => {
                                     </div>
                                 </div>
                             </TiltCard>
+                            </Wrapper>
                         </motion.div>
-                    ))}
+                    );
+                    })}
                 </div>
             </div>
 

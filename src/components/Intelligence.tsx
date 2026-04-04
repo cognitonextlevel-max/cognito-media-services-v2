@@ -73,7 +73,7 @@ export const Intelligence = () => {
                 <div className="absolute top-0 left-0 w-2 h-2 bg-cyan-400 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_rgba(0,255,255,1)]"></div>
               </div>
               <span className="text-[9px] sm:text-[11px] font-mono uppercase tracking-[0.4em] sm:tracking-[0.8em] text-cyan-400 font-bold leading-relaxed">
-                Cognito Media | Core Engine
+                DeMarkuss Day | Core Engine
               </span>
             </motion.div>
 

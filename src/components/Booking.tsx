@@ -38,28 +38,26 @@ export const Booking = () => {
               className="flex items-center gap-4 mb-8 sm:mb-10"
             >
               <div className="w-8 sm:w-12 h-px bg-cyan-400/30 shadow-[0_0_8px_rgba(0,255,255,0.3)]" />
-              <span className="section-label">Phase 01: Audit</span>
+              <span className="section-label">Let&apos;s Go</span>
             </motion.div>
 
             <ScrambleText
-              text="BOOK YOUR STRATEGIC AUDIT."
+              text="BOOK YOUR FREE STRATEGIC AUDIT."
               as="h2"
               className="text-display font-cabinet font-black uppercase leading-[0.85] tracking-tighter mb-8 sm:mb-10"
               speed={30}
             />
 
             <p className="text-body-lg text-zinc-500 font-light leading-relaxed max-w-md border-l-2 border-cyan-400/15 pl-5 sm:pl-8 mb-10 sm:mb-14">
-              Identify bottlenecks. Eliminate manual chaos.
-              <br />
-              Map your unfair systems advantage in{" "}
-              <span className="text-white font-medium">30 minutes.</span>
+              30 minutes. Zero pressure. Just a blueprint for where the money is hiding.{" "}
+              <span className="text-white font-medium">Or call me directly: 469.970.6943</span>
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-              <BookingFeature icon={Clock} text="30-Min Deep Review" />
-              <BookingFeature icon={Globe} text="Operational Asset Scan" />
-              <BookingFeature icon={Shield} text="Zero-Pressure Analysis" />
-              <BookingFeature icon={Calendar} text="Same-Day Available" />
+              <BookingFeature icon={Clock} text="30-Minute Deep Review" />
+              <BookingFeature icon={Globe} text="Custom Systems Blueprint" />
+              <BookingFeature icon={Shield} text="Zero Pressure — Just Strategy" />
+              <BookingFeature icon={Calendar} text="Same-Day Availability" />
             </div>
           </div>
 
@@ -80,7 +78,7 @@ export const Booking = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_6px_rgba(0,255,255,0.6)]" />
                   <span className="text-micro font-mono text-zinc-600 uppercase tracking-[0.3em]">Scheduler</span>
                 </div>
-                <span className="text-micro font-mono text-zinc-800 uppercase tracking-[0.2em]">Cognito v2</span>
+                <span className="text-micro font-mono text-zinc-800 uppercase tracking-[0.2em]">DD Systems</span>
               </div>
 
               {/* Calendar body */}

@@ -65,7 +65,7 @@ export default function AuditPage() {
                 <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
                     <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                     <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] font-black uppercase text-white group-hover:text-cyan-400 transition-colors">
-                        COGNITO OS
+                        DD SYSTEMS
                     </span>
                 </Link>
                 <Link href="/">

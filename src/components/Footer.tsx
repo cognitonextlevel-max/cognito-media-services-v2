@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
-import { CognitoLogo } from "./ui/CognitoLogo";
+
 
 export const Footer = () => {
   return (
@@ -20,7 +20,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <CognitoLogo className="w-12 h-12 sm:w-16 sm:h-16 text-cyan-400/30 mb-10 sm:mb-14" pulse={false} />
+            <span className="text-5xl sm:text-6xl text-cyan-400/30 mb-10 sm:mb-14 block" style={{ fontFamily: 'var(--font-signature)' }}>DD</span>
           </motion.div>
 
           <motion.h2
@@ -29,14 +29,14 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="text-heading font-cabinet font-black uppercase tracking-tighter mb-8 sm:mb-12 max-w-2xl"
           >
-            Deploy <span className="cyan-shimmer block mt-1">Cognito</span>
+            Let&apos;s <span className="cyan-shimmer block mt-1">Build</span>
           </motion.h2>
 
           <Link
-            href="mailto:systems@cognitomedia.com"
+            href="mailto:demarkuss@demarkussday.com"
             className="text-body-lg sm:text-subheading font-mono text-zinc-700 hover:text-cyan-400 transition-all duration-500 underline underline-offset-8 decoration-zinc-900/50 hover:decoration-cyan-400/30 tracking-wider group break-all sm:break-normal"
           >
-            systems<span className="text-zinc-800 group-hover:text-white transition-colors">@</span>cognitomedia.com
+            demarkuss<span className="text-zinc-800 group-hover:text-white transition-colors">@</span>demarkussday.com
           </Link>
         </div>
 
@@ -83,7 +83,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 sm:mt-16 text-center">
           <span className="text-[7px] sm:text-[8px] font-mono text-zinc-900 tracking-[0.5em] uppercase">
-            © {new Date().getFullYear()} Cognito Media & Business Solutions · Dallas, TX
+            © {new Date().getFullYear()} DeMarkuss Day · Dallas, TX
           </span>
         </div>
       </div>

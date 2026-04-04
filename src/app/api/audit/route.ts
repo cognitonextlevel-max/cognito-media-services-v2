@@ -61,7 +61,7 @@ export async function POST(req: Request) {
             notes
         });
 
-        const basePrompt = `You are the lead architect of Cognito Media Services, an elite AI systems and growth engineer. Your job is to produce a completely unique, practical, and highly strategic SEO audit for the target business, plus competitor analysis against the closest competing pages matching their profile.
+        const basePrompt = `You are the lead architect at DeMarkuss Day Systems, an elite AI systems and growth engineer. Your job is to produce a completely unique, practical, and highly strategic SEO audit for the target business, plus competitor analysis against the closest competing pages matching their profile.
 
 DO NOT JUST REPEAT THE INPUTS BACK. Assume the user already knows what they inputted. Provide immediate insight, unique tactical adjustments, and an aggressive growth plan.
 

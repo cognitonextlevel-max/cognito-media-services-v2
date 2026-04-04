@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Activity, Calendar, Cpu, Terminal } from "lucide-react";
-import { CognitoLogo } from "./ui/CognitoLogo";
+import { Activity, Bot, Calendar, Cpu, Terminal } from "lucide-react";
+import { WritingRevealLogo } from "./HandwrittenLogo";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export const Navigation = () => {
       setScrolled(window.scrollY > 100);
 
       // Track active section
-      const sections = ["system", "services", "intelligence", "audit"];
+      const sections = ["system", "services", "reviews", "audit"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top < window.innerHeight / 2) {
@@ -42,11 +42,8 @@ export const Navigation = () => {
             className="fixed top-0 left-0 right-0 z-[101] hidden sm:block"
           >
             <div className="h-12 bg-black/70 backdrop-blur-2xl border-b border-white/[0.03] flex items-center justify-between px-8 md:px-12 lg:px-24">
-              <Link href="#home" className="flex items-center gap-2.5 group">
-                <CognitoLogo className="w-4 h-4 text-cyan-400 group-hover:text-white transition-colors duration-500" pulse={false} />
-                <span className="text-micro font-mono font-black uppercase tracking-[0.4em] text-zinc-500 group-hover:text-white transition-colors duration-500">
-                  Cognito
-                </span>
+              <Link href="#home" className="flex items-center gap-2.5 group text-2xl text-cyan-400 group-hover:text-white transition-colors duration-500 leading-none">
+                <WritingRevealLogo text="DeMarkuss Day" delay={0.3} duration={1.8} />
               </Link>
               <div className="flex items-center gap-8">
                 <Link href="tel:4699706943" className="text-micro font-mono text-zinc-600 hover:text-cyan-400 transition-colors tracking-[0.2em]">
@@ -82,13 +79,12 @@ export const Navigation = () => {
             className="px-7 py-2.5 bg-zinc-900/80 border border-white/[0.06] text-zinc-300 text-micro font-black tracking-[0.3em] uppercase rounded-full transition-all duration-500 flex items-center gap-2 group hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(0,255,255,0.1)]"
             data-magnetic
           >
-            <CognitoLogo className="w-3.5 h-3.5 text-cyan-400 group-hover:text-white transition-colors duration-500" pulse={false} />
-            COGNITO
+            <span className="text-lg leading-none" style={{ fontFamily: 'var(--font-signature)' }}>DD</span>
           </motion.div>
         </Link>
         <div className="w-px h-5 bg-white/[0.06] mx-2" />
         <NavItem href="#services" icon={Terminal} label="Solutions" active={activeSection === "services"} />
-        <NavItem href="#intelligence" icon={Cpu} label="Engine" active={activeSection === "intelligence"} />
+        <NavItem href="/ai" icon={Bot} label="AI" active={false} />
       </motion.nav>
 
       {/* Mobile — bottom tab bar */}
@@ -100,14 +96,14 @@ export const Navigation = () => {
       >
         <div className="flex items-center justify-around py-2 px-1">
           <MobileNavItem href="#system" icon={Activity} label="System" active={activeSection === "system"} />
-          <MobileNavItem href="#audit" icon={Calendar} label="Audit" active={activeSection === "audit"} />
+          <MobileNavItem href="/ai" icon={Bot} label="AI" active={false} />
           <Link href="/" className="flex flex-col items-center gap-0.5 px-3 py-1">
             <div className="w-11 h-11 bg-zinc-900 border border-white/[0.06] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,255,255,0.08)]">
-              <CognitoLogo className="w-4 h-4 text-cyan-400" pulse={false} />
+              <span className="text-cyan-400 text-lg leading-none font-bold" style={{ fontFamily: 'var(--font-signature)' }}>DD</span>
             </div>
           </Link>
           <MobileNavItem href="#services" icon={Terminal} label="Solutions" active={activeSection === "services"} />
-          <MobileNavItem href="#intelligence" icon={Cpu} label="Engine" active={activeSection === "intelligence"} />
+          <MobileNavItem href="#audit" icon={Calendar} label="Audit" active={activeSection === "audit"} />
         </div>
       </motion.nav>
     </>

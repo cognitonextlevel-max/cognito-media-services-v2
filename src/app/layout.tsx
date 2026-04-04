@@ -2,38 +2,42 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.cognitoappsareus.com"),
-  title: "Cognito Media & Business Solutions | #1 Business Automation Agency in Dallas, TX",
-  description: "Dallas-Fort Worth's premier business automation agency. We build AI-powered systems, dominate local SEO, create high-converting websites, and deploy autonomous sales agents. 500+ businesses automated. Book your free strategic audit.",
+  metadataBase: new URL("https://www.demarkussday.com"),
+  title: "DeMarkuss Day | On-Site AI Implementation & Tech Partner in Dallas, TX",
+  description: "Dallas-Fort Worth's premier on-site tech and AI implementation agency. We modernize traditional businesses with custom websites, voice AI receptionists, Claude workflows, and dominating local SEO. Same-day availability.",
   keywords: [
-    "business automation Dallas",
+    "AI implementation Dallas",
+    "on site tech partner DFW",
     "local SEO Dallas Fort Worth",
-    "AI business systems Texas",
-    "custom app development Dallas",
-    "sales automation agency DFW",
     "website design Dallas TX",
-    "operational systems engineering",
-    "Cognito Media and Business Solutions",
-    "small business automation",
-    "Dallas digital marketing agency",
-    "AI sales agents",
-    "business process automation",
+    "business modernization agency",
+    "automation consulting Dallas",
+    "AI receptionist installation",
+    "DeMarkuss Day",
+    "traditional business technology",
+    "Dallas digital marketing",
+    "ElevenLabs Vapi integration DFW",
+    "Claude AI training Dallas",
+    "on-site AI training for businesses",
+    "DFW business automation",
+    "AI workflow implementation Texas",
   ],
-  authors: [{ name: "Cognito Media & Business Solutions" }],
-  creator: "Cognito Media & Business Solutions",
-  publisher: "Cognito Media & Business Solutions",
+  authors: [{ name: "DeMarkuss Day" }],
+  creator: "DeMarkuss Day",
+  publisher: "DeMarkuss Day",
   openGraph: {
-    title: "Cognito Media & Business Solutions | The Unfair Systems Advantage",
-    description: "We engineer automated business systems that capture leads, rank your brand, and close sales 24/7. Dallas-Fort Worth. 500+ businesses. Zero manual chaos.",
-    url: "https://www.cognitoappsareus.com",
-    siteName: "Cognito Media & Business Solutions",
+    title: "DeMarkuss Day | The Unfair Tech Advantage for DFW Businesses",
+    description: "We physically come to your Dallas-Fort Worth business to install websites, voice AI, and automated workflows. Same-day availability. The ultimate tech modernization partner.",
+    url: "https://www.demarkussday.com",
+    siteName: "DeMarkuss Day",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cognito Media & Business Solutions | The Unfair Systems Advantage",
-    description: "AI-powered business automation. Local SEO. High-converting websites. Autonomous sales agents. Dallas-Fort Worth.",
+    title: "DeMarkuss Day | The Unfair Tech Advantage",
+    description: "On-site AI implementation and web development for traditional businesses in Dallas-Fort Worth. Same-day availability.",
+    creator: "@demarkuss1",
   },
   robots: {
     index: true,
@@ -47,7 +51,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.cognitoappsareus.com",
+    canonical: "https://www.demarkussday.com",
+  },
+  verification: {
+    google: "ADD_YOUR_GOOGLE_VERIFICATION_CODE",
   },
 };
 
@@ -58,14 +65,21 @@ export const viewport = {
   themeColor: "#000000",
 };
 
-// Structured data for local business SEO
+// Structured data for local business SEO — ProfessionalService + Services + FAQ
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Cognito Media & Business Solutions",
-  description: "Dallas-Fort Worth's premier business automation agency. AI-powered systems, local SEO, websites, and autonomous sales agents.",
-  url: "https://www.cognitoappsareus.com",
+  name: "DeMarkuss Day",
+  description: "Dallas-Fort Worth's premier on-site tech modernization partner. We implement AI systems, local SEO, and custom websites directly at your business. Same-day availability.",
+  url: "https://www.demarkussday.com",
   telephone: "+1-469-970-6943",
+  email: "demarkussday@gmail.com",
+  founder: {
+    "@type": "Person",
+    name: "DeMarkuss Day",
+    jobTitle: "AI Implementation Specialist & Founder",
+    url: "https://www.demarkussday.com",
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "12200 Ford Rd",
@@ -79,10 +93,61 @@ const jsonLd = {
     latitude: 32.9255,
     longitude: -96.8917,
   },
-  areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: { "@type": "GeoCoordinates", latitude: 32.7767, longitude: -96.7970 },
-    geoRadius: "50000",
+  areaServed: [
+    { "@type": "City", name: "Dallas", sameAs: "https://en.wikipedia.org/wiki/Dallas" },
+    { "@type": "City", name: "Fort Worth", sameAs: "https://en.wikipedia.org/wiki/Fort_Worth,_Texas" },
+    { "@type": "City", name: "Plano" },
+    { "@type": "City", name: "Frisco" },
+    { "@type": "City", name: "Arlington" },
+    { "@type": "City", name: "Irving" },
+    { "@type": "City", name: "McKinney" },
+    { "@type": "City", name: "Garland" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "AI & Tech Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Site AI Training",
+          description: "We come to your business and train your team on Claude, AI workflows, and automation tools.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI Voice Receptionist Installation",
+          description: "Custom AI-powered phone systems using ElevenLabs and Vapi that handle calls 24/7.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Website Development",
+          description: "High-converting websites built with Next.js, optimized for local SEO in Dallas-Fort Worth.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Local SEO Domination",
+          description: "Google Business Profile optimization, local keywords, and map pack strategy for DFW businesses.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Business Workflow Automation",
+          description: "Custom automated workflows that save 10+ hours per week using AI and modern tools.",
+        },
+      },
+    ],
   },
   openingHours: "Mo-Su 09:00-17:00",
   priceRange: "$$",
@@ -98,6 +163,54 @@ const jsonLd = {
   ],
 };
 
+// FAQ Schema for rich snippets in search results
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does DeMarkuss Day do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DeMarkuss Day is a Dallas-Fort Worth based on-site AI implementation agency. We physically come to your business to install AI tools like Claude, voice AI receptionists, automated workflows, custom websites, and SEO systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you come to my business in person?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! We are an on-site, in-person tech partner. We come directly to your Dallas-Fort Worth business to install, configure, and train your team on all AI tools and systems.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How quickly can you start?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer same-day availability for most services. Book a free 30-minute strategic audit and we can usually begin implementation the same week.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What AI tools do you use?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We specialize in Claude (by Anthropic) for business operations, ElevenLabs and Vapi for AI voice systems, Next.js for web development, and custom automation workflows. We train your team on every tool we install.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does it cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Services start with a free 30-minute strategic audit. Pricing depends on the scope of your project — from single-service installations to full business transformation packages. Call 469-970-6943 for a custom quote.",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -108,14 +221,24 @@ export default function RootLayout({
       <head>
         {/* Preconnect for font performance */}
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.fontshare.com" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,900,1,2,3,4,5,7&f[]=satoshi@300,400,500,700&f[]=jet-brains-mono@400,500&display=swap"
           rel="stylesheet"
         />
-        {/* Structured Data for SEO */}
+        {/* Signature font for personal brand */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet" />
+        {/* Structured Data — Local Business */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* Structured Data — FAQ (Rich Snippets) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="overflow-x-hidden">

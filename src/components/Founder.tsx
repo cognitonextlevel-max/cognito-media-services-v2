@@ -40,7 +40,7 @@ export const Founder = () => {
 
                 <Image
                   src="/founder.jpg"
-                  alt="DeMarkuss Day — Founder, Cognito Media & Business Solutions"
+                  alt="DeMarkuss Day — Business Systems Architect, Dallas TX"
                   fill
                   className="object-cover grayscale-[0.6] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-[1.03]"
                   priority
@@ -69,27 +69,9 @@ export const Founder = () => {
             </h2>
 
             <p className="text-body-lg text-zinc-400 font-light leading-relaxed mb-10 sm:mb-14 max-w-lg">
-              I built the Cognito formula to solve the bottlenecks in my own business. We replace human guesswork with{" "}
+              I built this system to solve the bottlenecks in my own business. We replace human guesswork with{" "}
               <span className="text-white font-medium">engineered consistency.</span>
             </p>
-
-            {/* Industries grid */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-10 sm:mb-14">
-              {[
-                { name: "Service Operations", sub: "Logic for leaders" },
-                { name: "Real Estate", sub: "Automated workflows" },
-                { name: "Short Term Rentals", sub: "Process management" },
-                { name: "Small Business OS", sub: "System documentation" },
-              ].map((item, i) => (
-                <div key={i} className="group p-4 sm:p-5 bg-zinc-950 border border-zinc-900/50 hover:border-zinc-800 transition-all duration-500 relative overflow-hidden">
-                  <div className="w-0.5 h-full bg-cyan-400 absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="block text-caption font-cabinet font-bold uppercase tracking-wide mb-1 text-zinc-300 group-hover:text-cyan-400 transition-colors duration-500">
-                    {item.name}
-                  </span>
-                  <span className="text-micro font-mono text-zinc-600 uppercase tracking-[0.2em]">{item.sub}</span>
-                </div>
-              ))}
-            </div>
 
             {/* Quote */}
             <blockquote className="text-body text-zinc-500 italic leading-relaxed border-l-2 border-cyan-400/20 pl-5 sm:pl-8 mb-10 sm:mb-12 bg-gradient-to-r from-cyan-900/[0.04] to-transparent py-4 pr-4">
@@ -103,7 +85,7 @@ export const Founder = () => {
                   DeMarkuss Day
                 </span>
                 <span className="block text-micro font-mono text-zinc-600 uppercase tracking-[0.35em] font-bold">
-                  Founder, Cognito Media & Business Solutions
+                  Business Systems Architect · Dallas, TX
                 </span>
               </div>
             </div>

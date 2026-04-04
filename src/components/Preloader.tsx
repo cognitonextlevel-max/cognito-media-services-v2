@@ -7,7 +7,7 @@ const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#
 
 export const Preloader = () => {
   const [show, setShow] = useState(true);
-  const [text, setText] = useState("COGNITO");
+  const [text, setText] = useState("DEMARKUSS");
   const [counter, setCounter] = useState(0);
   const [phase, setPhase] = useState<"scramble" | "reveal" | "exit">("scramble");
 
@@ -30,10 +30,10 @@ export const Preloader = () => {
       const progress = Math.min(elapsed / 2000, 1);
 
       setCounter(Math.floor(progress * 100));
-      setText(scramble("COGNITO", progress));
+      setText(scramble("DEMARKUSS", progress));
 
       if (progress >= 1) {
-        setText("COGNITO");
+        setText("DEMARKUSS");
         setPhase("reveal");
         setTimeout(() => setPhase("exit"), 600);
         setTimeout(() => setShow(false), 1400);
@@ -136,7 +136,7 @@ export const Preloader = () => {
           {/* Bottom text */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
             <span className="text-[8px] font-mono text-zinc-800 uppercase tracking-[0.8em]">
-              Cognito Media & Business Solutions
+              DeMarkuss Day · Business Systems
             </span>
           </div>
         </motion.div>

@@ -1,10 +1,14 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { Philosophy } from "@/components/Philosophy";
-import { TimeCalculator } from "@/components/TimeCalculator";
+import { Problem } from "@/components/Problem";
+import { AIReadiness } from "@/components/AIReadiness";
+import { Modules } from "@/components/Modules";
+import { Process } from "@/components/Process";
+import { Training } from "@/components/Training";
 import { Founder } from "@/components/Founder";
-import { Services } from "@/components/Services";
-import { Intelligence } from "@/components/Intelligence";
+import { Reviews } from "@/components/Reviews";
+import { WhatsNew } from "@/components/WhatsNew";
+import { Qualify } from "@/components/Qualify";
 import { Booking } from "@/components/Booking";
 import { Footer } from "@/components/Footer";
 import { ScrollingMarquee } from "@/components/ScrollingMarquee";
@@ -17,35 +21,29 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ScrollingMarquee
-        text="SYSTEMS · LOGIC · PRECISION · AUTOMATION · SCALE"
+        text="CLAUDE · ELEVENLABS · VAPI · AUTOMATION · AI TRAINING · ON-SITE"
         speed={30}
         variant="outline"
       />
-      <Philosophy />
+      <Problem />
+      <AIReadiness />
+      <Modules />
       <ScrollingMarquee
-        text="BUILD ONCE · EXECUTE FOREVER · COGNITO MEDIA"
+        text="BUILD ONCE · EXECUTE FOREVER · DEMARKUSS DAY"
         speed={40}
         direction="right"
         variant="large"
       />
-      <TimeCalculator />
+      <Process />
+      <Training />
       <Founder />
+      <Reviews />
+      <WhatsNew />
+      <Qualify />
       <ScrollingMarquee
-        text="LOCAL SEO · WEBSITES · CUSTOM APPS · SALES AGENTS · OPERATIONAL LOGIC"
-        speed={25}
-      />
-      <Services />
-      <ScrollingMarquee
-        text="ELIMINATE ERROR · KNOWLEDGE ASSETS · ENGINEERED GROWTH"
-        speed={35}
-        direction="right"
-        variant="outline"
-      />
-      <Intelligence />
-      <ScrollingMarquee
-        text="DEPLOY COGNITO · STRATEGIC AUDIT · UNFAIR ADVANTAGE"
+        text="DEPLOY WITH DEMARKUSS · AI INSTALLATION · UNFAIR ADVANTAGE"
         speed={28}
-        variant="large"
+        variant="outline"
       />
       <Booking />
       <Footer />

@@ -9,7 +9,7 @@ export async function sendWebhookLead(data: any) {
   try {
     const payload = {
       ...data,
-      source: "Cognito OS AI Audit Form",
+      source: "DeMarkuss Day AI Audit Form",
       timestamp: new Date().toISOString()
     };
 
