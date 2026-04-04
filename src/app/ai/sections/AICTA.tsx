@@ -51,7 +51,7 @@ export const AICTA = () => {
           viewport={{ once: true }}
           className="text-body-lg text-zinc-500 font-light leading-relaxed max-w-xl mx-auto mb-12 sm:mb-16"
         >
-          Book a free AI audit. We&apos;ll show you exactly where AI fits in your business — and what it&apos;ll save you.
+          Book a free AI audit. We&apos;ll show you exactly where AI fits in your business and what it&apos;ll save you.
         </motion.p>
 
         {/* Calendar card */}

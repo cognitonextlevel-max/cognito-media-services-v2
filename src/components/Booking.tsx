@@ -56,7 +56,7 @@ export const Booking = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               <BookingFeature icon={Clock} text="30-Minute Deep Review" />
               <BookingFeature icon={Globe} text="Custom Systems Blueprint" />
-              <BookingFeature icon={Shield} text="Zero Pressure — Just Strategy" />
+              <BookingFeature icon={Shield} text="Zero Pressure, Just Strategy" />
               <BookingFeature icon={Calendar} text="Same-Day Availability" />
             </div>
           </div>

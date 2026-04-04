@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     title: "On-Site Setup",
     tag: "WEEK 1-2",
-    description: "We come to your location and install your AI systems. Sales agents, voice bots, content engines — whatever the audit identified.",
+    description: "We come to your location and install your AI systems. Sales agents, voice bots, content engines, whatever the audit identified.",
     icon: Wrench,
   },
   {

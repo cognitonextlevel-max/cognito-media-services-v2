@@ -50,7 +50,7 @@ const services = [
     {
         title: "AI DEPLOYMENT",
         subtitle: "ON-SITE SETUP",
-        description: "We come to your business, install custom AI agents and automation, and train your team to use them. Voice bots, sales agents, content engines — deployed in person.",
+        description: "We come to your business, install custom AI agents and automation, and train your team to use them. Voice bots, sales agents, content engines deployed in person.",
         icon: Cpu,
         stats: [
             { label: "SETUP", value: "1-2 WEEKS" },

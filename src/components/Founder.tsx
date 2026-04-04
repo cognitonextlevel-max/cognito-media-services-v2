@@ -40,7 +40,7 @@ export const Founder = () => {
 
                 <Image
                   src="/founder.jpg"
-                  alt="DeMarkuss Day — Business Systems Architect, Dallas TX"
+                  alt="DeMarkuss Day - Business Systems Architect, Dallas TX"
                   fill
                   className="object-cover grayscale-[0.6] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-[1.03]"
                   priority

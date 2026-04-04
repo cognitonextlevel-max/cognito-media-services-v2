@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.demarkussday.com"),
   title: "DeMarkuss Day | On-Site AI Implementation & Tech Partner in Dallas, TX",
-  description: "Dallas-Fort Worth's premier on-site tech and AI implementation agency. We modernize traditional businesses with custom websites, voice AI receptionists, Claude workflows, and dominating local SEO. Same-day availability.",
+  description: "Dallas-Fort Worth's premier on-site tech and AI implementation agency. We modernize traditional businesses with custom websites, voice AI receptionists, custom AI workflows, and dominating local SEO. Same-day availability.",
   keywords: [
     "AI implementation Dallas",
     "on site tech partner DFW",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     "DeMarkuss Day",
     "traditional business technology",
     "Dallas digital marketing",
-    "ElevenLabs Vapi integration DFW",
-    "Claude AI training Dallas",
+    "AI voice agent integration DFW",
+    "business AI training Dallas",
     "on-site AI training for businesses",
     "DFW business automation",
     "AI workflow implementation Texas",
@@ -112,7 +112,7 @@ const jsonLd = {
         itemOffered: {
           "@type": "Service",
           name: "On-Site AI Training",
-          description: "We come to your business and train your team on Claude, AI workflows, and automation tools.",
+          description: "We come to your business and train your team on AI workflows, voice agents, and automation tools.",
         },
       },
       {
@@ -120,7 +120,7 @@ const jsonLd = {
         itemOffered: {
           "@type": "Service",
           name: "AI Voice Receptionist Installation",
-          description: "Custom AI-powered phone systems using ElevenLabs and Vapi that handle calls 24/7.",
+          description: "Custom AI-powered voice agents that handle calls 24/7.",
         },
       },
       {
@@ -173,7 +173,7 @@ const faqJsonLd = {
       name: "What does DeMarkuss Day do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "DeMarkuss Day is a Dallas-Fort Worth based on-site AI implementation agency. We physically come to your business to install AI tools like Claude, voice AI receptionists, automated workflows, custom websites, and SEO systems.",
+        text: "DeMarkuss Day is a Dallas-Fort Worth based on-site AI implementation agency. We physically come to your business to install AI voice receptionists, automated workflows, custom websites, and SEO systems.",
       },
     },
     {
@@ -197,7 +197,7 @@ const faqJsonLd = {
       name: "What AI tools do you use?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialize in Claude (by Anthropic) for business operations, ElevenLabs and Vapi for AI voice systems, Next.js for web development, and custom automation workflows. We train your team on every tool we install.",
+        text: "We specialize in business operations AI, autonomous AI voice systems, Next.js for web development, and custom automation workflows. We train your team on every system we install.",
       },
     },
     {

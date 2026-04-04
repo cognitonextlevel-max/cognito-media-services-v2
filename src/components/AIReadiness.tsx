@@ -39,7 +39,7 @@ const TerminalDemo = () => {
   const [phase, setPhase] = useState<"idle" | "typing-prompt" | "thinking" | "typing-response">("idle");
 
   const prompt = "Write a follow-up email to a client who requested a plumbing estimate last week";
-  const response = `Subject: Your Plumbing Estimate — Ready When You Are
+  const response = `Subject: Your Plumbing Estimate Ready When You Are
 
 Hi Marcus,
 
@@ -90,7 +90,7 @@ Mike | Thompson Plumbing Co.`;
           <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
         </div>
         <span className="text-[10px] text-zinc-600 tracking-wider uppercase ml-2 flex items-center gap-1.5">
-          <Terminal size={10} /> Claude — Installed by DeMarkuss Day
+          <Terminal size={10} /> AI Systems — Installed by DeMarkuss Day
         </span>
         <div className="ml-auto flex items-center gap-1.5">
           <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_6px_rgba(0,255,255,0.8)]" />
@@ -118,14 +118,14 @@ Mike | Thompson Plumbing Co.`;
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400/60 animate-bounce" style={{ animationDelay: "150ms" }} />
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400/60 animate-bounce" style={{ animationDelay: "300ms" }} />
             </div>
-            <span className="text-[10px] uppercase tracking-widest">Claude is thinking...</span>
+            <span className="text-[10px] uppercase tracking-widest">System is connecting...</span>
           </div>
         )}
 
         {/* Response */}
         {responseText && (
           <div className="border-l-2 border-cyan-400/20 pl-4">
-            <span className="text-cyan-400/60 text-[10px] uppercase tracking-widest block mb-1">Claude</span>
+            <span className="text-cyan-400/60 text-[10px] uppercase tracking-widest block mb-1">System</span>
             <pre className="text-zinc-400 leading-relaxed whitespace-pre-wrap font-mono text-xs">
               {responseText}
               {phase === "typing-response" && <span className="inline-block w-[2px] h-4 bg-cyan-400 ml-0.5 animate-pulse" />}
@@ -141,20 +141,20 @@ Mike | Thompson Plumbing Co.`;
 const trainings = [
   {
     icon: Brain,
-    title: "CLAUDE FOR BUSINESS",
-    description: "We install Claude on your team's machines and teach them how to draft emails, proposals, invoices, and SOPs in seconds. No YouTube required.",
+    title: "AI FOR BUSINESS",
+    description: "We implement custom AI workflows on your team's machines and teach them how to draft emails, proposals, invoices, and SOPs in seconds. No YouTube required.",
     tag: "AI CORE",
   },
   {
     icon: Phone,
     title: "AI VOICE RECEPTIONIST",
-    description: "We set up ElevenLabs + Vapi so your phone is answered 24/7 by an AI that sounds human. We train your team to manage it.",
+    description: "We set up autonomous voice agents so your phone is answered 24/7 by an AI that sounds human. We train your team to manage it.",
     tag: "VOICE AI",
   },
   {
     icon: Workflow,
     title: "WORKFLOW AUTOMATION",
-    description: "We connect your tools — QuickBooks, Google Calendar, CRM — so data flows automatically. We show your team exactly how it works.",
+    description: "We connect your tools like QuickBooks, Google Calendar, and your CRM so data flows automatically. We show your team exactly how it works.",
     tag: "AUTOMATION",
   },
 ];
@@ -162,7 +162,7 @@ const trainings = [
 const stats = [
   { value: 72, suffix: "%", label: "of companies are already using AI in at least one business function" },
   { value: 5, suffix: "x", label: "faster response times with AI voice agents vs. human staff" },
-  { value: 0, prefix: "$", suffix: "", label: "what it costs you to learn — we train you on-site, free during install" },
+  { value: 0, prefix: "$", suffix: "", label: "what it costs you to learn, we train you on-site, free during install" },
 ];
 
 export const AIReadiness = () => {

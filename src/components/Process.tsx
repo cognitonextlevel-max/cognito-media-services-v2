@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     title: "SYSTEM BUILD",
     tag: "1-2 WEEKS",
-    description: "I build your custom system — SEO, website, AI, automations — and install it on-site. I train your team. Everything works before I leave.",
+    description: "I build your custom system including SEO, website, AI, and automations and install it on-site. I train your team. Everything works before I leave.",
     icon: Wrench,
   },
   {

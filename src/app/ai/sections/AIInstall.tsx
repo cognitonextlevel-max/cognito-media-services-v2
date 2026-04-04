@@ -7,7 +7,7 @@ import { TiltCard } from "@/components/TiltCard";
 
 const systems = [
   { icon: Bot, title: "AI Sales Agent", description: "Follows up with every lead 24/7 via text, email, or voice call. Never misses a prospect.", replaces: "missed follow-ups, dead leads" },
-  { icon: Headphones, title: "AI Receptionist", description: "Answers calls, books appointments, handles FAQs — all without a human.", replaces: "missed calls, scheduling chaos" },
+  { icon: Headphones, title: "AI Receptionist", description: "Answers calls, books appointments, handles FAQs all without a human.", replaces: "missed calls, scheduling chaos" },
   { icon: PenTool, title: "AI Content Engine", description: "Generates social posts, emails, and blog content on your brand voice.", replaces: "content bottleneck, social media stress" },
   { icon: MessageSquare, title: "AI Customer Service", description: "Handles support questions on your website, text, or email instantly.", replaces: "slow response times, repetitive questions" },
   { icon: Filter, title: "AI Lead Qualifier", description: "Scores and routes leads before they hit your sales team.", replaces: "wasted time on bad leads" },

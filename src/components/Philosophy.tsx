@@ -10,7 +10,7 @@ const philosophies = [
     number: "01",
     title: "ELIMINATE ERROR",
     subtitle: "PRECISION",
-    description: "Every manual process is a liability. We replace human error with systems that execute perfectly — every time, at any scale, without supervision."
+    description: "Every manual process is a liability. We replace human error with systems that execute perfectly every time, at any scale, without supervision."
   },
   {
     number: "02",

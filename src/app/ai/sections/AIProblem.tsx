@@ -29,7 +29,7 @@ export const AIProblem = () => {
 
         <div className="space-y-6 border-l-2 border-cyan-400/15 pl-5 sm:pl-8">
           <TextReveal
-            text="Every week you wait, your competitors are automating their follow-ups, generating content in seconds, and closing leads while they sleep. You're still doing it all manually — or worse, you signed up for 6 AI tools and none of them talk to each other."
+            text="Every week you wait, your competitors are automating their follow-ups, generating content in seconds, and closing leads while they sleep. You're still doing it all manually, or worse, you signed up for 6 AI tools and none of them talk to each other."
             className="text-body-lg text-zinc-400 font-light leading-relaxed"
           />
           <TextReveal

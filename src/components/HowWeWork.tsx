@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     title: "SYSTEM BUILD",
     subtitle: "ENGINEER",
-    description: "We build the automated systems — AI agents, workflows, SOPs — that replace the manual work permanently.",
+    description: "We build the automated systems like AI agents, workflows, and SOPs that replace the manual work permanently.",
     icon: Cpu,
   },
   {

@@ -13,8 +13,8 @@ import { ScrollingMarquee } from "@/components/ScrollingMarquee";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Deployment — On-Site AI Setup for Dallas Businesses | DeMarkuss Day",
-  description: "We come to your business, install custom AI agents — voice bots, sales automation, content engines — and train your team in person. DFW only. Setup in 1-2 weeks.",
+  title: "AI Deployment - On-Site AI Setup for Dallas Businesses | DeMarkuss Day",
+  description: "We come to your business, install custom AI agents like voice bots, sales automation, and content engines and train your team in person. DFW only. Setup in 1-2 weeks.",
 };
 
 export default function AIPage() {

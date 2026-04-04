@@ -16,7 +16,7 @@ const steps = [
   {
     number: "02",
     title: "I INSTALL",
-    description: "Claude, Voice AI, Website, SEO — everything gets set up on YOUR machines, on YOUR network. Production-ready before I leave.",
+    description: "AI Workflows, Voice Agents, Website, SEO: everything gets set up on YOUR machines, on YOUR network. Production-ready before I leave.",
     icon: Download,
     detail: "All tools configured live",
   },

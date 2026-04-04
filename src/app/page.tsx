@@ -21,7 +21,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ScrollingMarquee
-        text="CLAUDE · ELEVENLABS · VAPI · AUTOMATION · AI TRAINING · ON-SITE"
+        text="AI VOICE AGENTS · AUTOMATION · AI TRAINING · ON-SITE · STRATEGY"
         speed={30}
         variant="outline"
       />

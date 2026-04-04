@@ -7,7 +7,7 @@ import { Sparkles, Mic, Phone, Cpu, Globe, Zap } from "lucide-react";
 
 const tools = [
   {
-    name: "CLAUDE",
+    name: "AI SYSTEMS",
     version: "Opus 4",
     description: "The most advanced AI model on earth. We install it for your team.",
     icon: Sparkles,
@@ -17,7 +17,7 @@ const tools = [
     glowColor: "group-hover:shadow-[0_0_40px_rgba(245,158,11,0.1)]",
   },
   {
-    name: "ELEVENLABS",
+    name: "VOICE AGENTS",
     version: "Voice AI",
     description: "Human-sounding AI phone agents. Your phone never goes unanswered.",
     icon: Mic,
@@ -27,7 +27,7 @@ const tools = [
     glowColor: "group-hover:shadow-[0_0_40px_rgba(168,85,247,0.1)]",
   },
   {
-    name: "VAPI",
+    name: "AUTOMATION",
     version: "Voice Agents",
     description: "Custom AI receptionists trained on YOUR business data and processes.",
     icon: Phone,

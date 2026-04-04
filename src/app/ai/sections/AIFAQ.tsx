@@ -8,23 +8,23 @@ import { ScrambleText } from "@/components/ScrambleText";
 const faqs = [
   {
     q: "What if my team isn't tech-savvy?",
-    a: "That's exactly why we train in person. We don't leave until everyone is comfortable. No jargon, no assumptions — just hands-on guidance until it clicks.",
+    a: "That's exactly why we train in person. We don't leave until everyone is comfortable. No jargon, no assumptions, just hands-on guidance until it clicks.",
   },
   {
     q: "What AI tools do you use?",
-    a: "Claude, Vapi, n8n, and more — we pick the best tool for your workflow, not the trendy one. Every system is custom-built for YOUR business.",
+    a: "We install custom AI workflows, voice agents, and automation tools directly on your machines. We pick the best system for your needs, not the trendy one. Every system is custom-built for YOUR business.",
   },
   {
     q: "Do I need to keep paying after setup?",
-    a: "No. The setup works on its own. The retainer is for ongoing optimization and new builds — completely optional.",
+    a: "No. The setup works on its own. The retainer is for ongoing optimization and new builds, which is completely optional.",
   },
   {
     q: "How fast will I see results?",
-    a: "Most clients see ROI within the first week — automated follow-ups and lead capture start immediately after setup.",
+    a: "Most clients see ROI within the first week as automated follow-ups and lead capture start immediately after setup.",
   },
   {
     q: "Is this just ChatGPT?",
-    a: "No. We build custom AI agents tailored to YOUR business, using multiple platforms orchestrated together. It's not a chatbot — it's a system.",
+    a: "No. We build custom AI agents tailored to YOUR business, using multiple platforms orchestrated together. It's not a chatbot, it's a complete system.",
   },
 ];
 
