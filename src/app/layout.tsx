@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     canonical: "https://www.demarkussday.com",
   },
   verification: {
-    google: "ADD_YOUR_GOOGLE_VERIFICATION_CODE",
+    google: "dw-e0m-BEGH_g1MNRlQlWoHQq8pYr6BZJ0H_pFPx3_w",
   },
 };
 
@@ -74,6 +74,8 @@ const jsonLd = {
   url: "https://www.demarkussday.com",
   telephone: "+1-469-970-6943",
   email: "demarkussday@gmail.com",
+  image: "https://www.demarkussday.com/founder.jpg",
+  logo: "https://www.demarkussday.com/logo.png",
   founder: {
     "@type": "Person",
     name: "DeMarkuss Day",
@@ -163,61 +165,13 @@ const jsonLd = {
   ],
 };
 
-// FAQ Schema for rich snippets in search results
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What does DeMarkuss Day do?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "DeMarkuss Day is a Dallas-Fort Worth based on-site AI implementation agency. We physically come to your business to install AI voice receptionists, automated workflows, custom websites, and SEO systems.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you come to my business in person?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! We are an on-site, in-person tech partner. We come directly to your Dallas-Fort Worth business to install, configure, and train your team on all AI tools and systems.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How quickly can you start?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer same-day availability for most services. Book a free 30-minute strategic audit and we can usually begin implementation the same week.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What AI tools do you use?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We specialize in business operations AI, autonomous AI voice systems, Next.js for web development, and custom automation workflows. We train your team on every system we install.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does it cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Services start with a free 30-minute strategic audit. Pricing depends on the scope of your project — from single-service installations to full business transformation packages. Call 469-970-6943 for a custom quote.",
-      },
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth overflow-x-hidden">
+    <html lang="en" className="scroll-smooth overflow-x-hidden" suppressHydrationWarning>
       <head>
         {/* Preconnect for font performance */}
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
@@ -234,11 +188,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {/* Structured Data — FAQ (Rich Snippets) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="overflow-x-hidden">

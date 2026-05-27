@@ -7,22 +7,22 @@ import { TiltCard } from "./TiltCard";
 
 const problems = [
   {
-    icon: MapPinOff,
-    stat: "Losing",
-    headline: "The Neighborhood",
-    detail: "Your competitors are stealing local market share because they know how to use local SEO and targeted Facebook ads.",
+    icon: PhoneOff,
+    stat: "62%",
+    headline: "Unanswered Calls",
+    detail: "62% of your calls go unanswered. 85% of those people never call back. That's $126K/year walking out the door.",
   },
   {
     icon: Clock,
-    stat: "Trapped",
-    headline: "By The Tech Barrier",
-    detail: "You have a business to run. You don't have time to sit on YouTube learning how to build a website or configure an AI receptionist.",
+    stat: "5 Min",
+    headline: "Leads Go Cold",
+    detail: "If you don't respond in 5 minutes, you're 21x less likely to close. Your competitors respond in 30 seconds.",
   },
   {
-    icon: PhoneOff,
-    stat: "Ignored",
-    headline: "By Online Agencies",
-    detail: "You send $5k to an agency across the country and get nothing. You need someone on-site, in-person, in DFW who actually answers the phone.",
+    icon: MapPinOff,
+    stat: "Top 3",
+    headline: "Google Can't Find You",
+    detail: "If you're not in the top 3 map results, you don't exist. 46% of all Google searches are local.",
   },
 ];
 

@@ -48,10 +48,16 @@ export const Reviews = () => {
           <ScrambleText
             text="WHAT THEY SAY AFTER I LEAVE."
             as="h2"
-            className="text-display font-cabinet font-black tracking-tighter uppercase mb-4"
+            className="text-display font-cabinet font-black tracking-tighter uppercase mb-6"
             speed={35}
           />
-          <p className="text-micro font-mono text-zinc-600 uppercase tracking-[0.4em]">17 five-star reviews</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+            <span className="text-micro font-mono text-zinc-500 uppercase tracking-[0.4em]">17 verified five-star reviews</span>
+            <span className="hidden sm:inline-block w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
+            <span className="text-caption font-mono text-cyan-400 font-bold uppercase tracking-[0.3em] flex items-center gap-1.5 bg-cyan-950/20 border border-cyan-400/20 px-3 py-1 rounded-sm shadow-[0_0_15px_rgba(34,211,238,0.1)]">
+              5.0★ Google Rating
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">

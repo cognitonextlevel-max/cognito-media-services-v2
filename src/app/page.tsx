@@ -21,7 +21,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ScrollingMarquee
-        text="AI VOICE AGENTS · AUTOMATION · AI TRAINING · ON-SITE · STRATEGY"
+        text="SYSTEMS · AI · SEO · WEBSITES · AUTOMATION · SCALE"
         speed={30}
         variant="outline"
       />
@@ -41,7 +41,7 @@ export default function Home() {
       <WhatsNew />
       <Qualify />
       <ScrollingMarquee
-        text="DEPLOY WITH DEMARKUSS · AI INSTALLATION · UNFAIR ADVANTAGE"
+        text="DEPLOY WITH DEMARKUSS · STRATEGIC AUDIT · UNFAIR ADVANTAGE"
         speed={28}
         variant="outline"
       />

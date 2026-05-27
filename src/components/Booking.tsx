@@ -106,6 +106,13 @@ export const Booking = () => {
                   <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform duration-300" />
                 </button>
 
+                <p className="mt-6 text-micro font-mono text-zinc-500 uppercase tracking-[0.25em]">
+                  Or call directly:{" "}
+                  <a href="tel:4699706943" className="text-cyan-400 hover:text-white font-bold transition-colors">
+                    469.970.6943
+                  </a>
+                </p>
+
                 <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/[0.03] flex justify-center gap-8 sm:gap-12 opacity-25">
                   <span className="text-[7px] font-mono uppercase tracking-[0.3em] flex items-center gap-1.5">
                     <Shield size={8} /> Secure
