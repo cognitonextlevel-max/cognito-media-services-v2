@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://demarkussday.com"),
+  metadataBase: new URL("https://www.demarkussday.com"),
   title: "DeMarkuss Day | On-Site AI Implementation & Tech Partner in Dallas, TX",
   description: "Dallas-Fort Worth's premier on-site tech and AI implementation agency. We modernize traditional businesses with custom websites, voice AI receptionists, custom AI workflows, and dominating local SEO. Same-day availability.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DeMarkuss Day | The Unfair Tech Advantage for DFW Businesses",
     description: "We physically come to your Dallas-Fort Worth business to install websites, voice AI, and automated workflows. Same-day availability. The ultimate tech modernization partner.",
-    url: "https://demarkussday.com",
+    url: "https://www.demarkussday.com",
     siteName: "DeMarkuss Day",
     locale: "en_US",
     type: "website",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://demarkussday.com",
+    canonical: "https://www.demarkussday.com",
   },
   verification: {
     google: "dw-e0m-BEGH_g1MNRlQlWoHQq8pYr6BZJ0H_pFPx3_w",
@@ -71,16 +71,16 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "DeMarkuss Day",
   description: "Dallas-Fort Worth's premier on-site tech modernization partner. We implement AI systems, local SEO, and custom websites directly at your business. Same-day availability.",
-  url: "https://demarkussday.com",
+  url: "https://www.demarkussday.com",
   telephone: "+1-469-970-6943",
   email: "demarkussday@gmail.com",
-  image: "https://demarkussday.com/founder.jpg",
-  logo: "https://demarkussday.com/logo.png",
+  image: "https://www.demarkussday.com/founder.jpg",
+  logo: "https://www.demarkussday.com/logo.png",
   founder: {
     "@type": "Person",
     name: "DeMarkuss Day",
     jobTitle: "AI Implementation Specialist & Founder",
-    url: "https://demarkussday.com",
+    url: "https://www.demarkussday.com",
   },
   address: {
     "@type": "PostalAddress",
@@ -189,42 +189,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Microsoft Clarity */}
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "wi2mdfle66");
-            `
-          }}
-        />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-K7N73K6V');
-            `
-          }}
-        />
       </head>
       <body className="overflow-x-hidden">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-K7N73K6V"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         <div className="grain" />
         {children}
       </body>
