@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
+import { SystemComparison } from "@/components/SystemComparison";
 import { AIReadiness } from "@/components/AIReadiness";
 import { Modules } from "@/components/Modules";
 import { Process } from "@/components/Process";
@@ -27,6 +28,7 @@ export default function Home() {
         variant="outline"
       />
       <Problem />
+      <SystemComparison />
       <AIReadiness />
       <Modules />
       <ScrollingMarquee
