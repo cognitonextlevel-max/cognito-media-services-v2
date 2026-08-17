@@ -56,7 +56,7 @@ export const Qualify = () => {
             <h3 className="text-caption font-mono font-bold text-cyan-400 uppercase tracking-[0.4em] mb-6 sm:mb-8">
               You&apos;re ready if:
             </h3>
-            <ul className="space-y-4 sm:space-y-5 list-none">
+            <ul className="space-y-4 sm:space-y-5">
               {ready.map((item, i) => (
                 <motion.li
                   key={i}
@@ -64,7 +64,7 @@ export const Qualify = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className="flex items-start gap-3 sm:gap-4 list-none"
+                  className="flex items-start gap-3 sm:gap-4"
                 >
                   <div className="shrink-0 w-5 h-5 mt-0.5 border border-cyan-400/40 flex items-center justify-center">
                     <Check size={12} className="text-cyan-400" />
@@ -81,12 +81,12 @@ export const Qualify = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.19, 1, 0.22, 1] }}
-            className="p-6 sm:p-8 md:p-10 border border-zinc-900/50 bg-[#050505] hover:border-red-500/10 transition-colors duration-500"
+            className="p-6 sm:p-8 md:p-10 border border-zinc-900/50 bg-[#050505]"
           >
-            <h3 className="text-caption font-mono font-bold text-red-400/80 uppercase tracking-[0.4em] mb-6 sm:mb-8">
+            <h3 className="text-caption font-mono font-bold text-zinc-600 uppercase tracking-[0.4em] mb-6 sm:mb-8">
               This isn&apos;t for you if:
             </h3>
-            <ul className="space-y-4 sm:space-y-5 list-none">
+            <ul className="space-y-4 sm:space-y-5">
               {notReady.map((item, i) => (
                 <motion.li
                   key={i}
@@ -94,12 +94,12 @@ export const Qualify = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className="flex items-start gap-3 sm:gap-4 list-none"
+                  className="flex items-start gap-3 sm:gap-4"
                 >
-                  <div className="shrink-0 w-5 h-5 mt-0.5 border border-red-500/20 bg-red-950/10 flex items-center justify-center">
-                    <X size={12} className="text-red-500/80" />
+                  <div className="shrink-0 w-5 h-5 mt-0.5 border border-zinc-800 flex items-center justify-center">
+                    <X size={12} className="text-zinc-700" />
                   </div>
-                  <span className="text-body text-zinc-500 font-light">{item}</span>
+                  <span className="text-body text-zinc-600 font-light">{item}</span>
                 </motion.li>
               ))}
             </ul>

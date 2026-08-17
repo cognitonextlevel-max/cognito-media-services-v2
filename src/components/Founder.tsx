@@ -64,18 +64,18 @@ export const Founder = () => {
             </span>
 
             <h2 className="text-heading font-cabinet font-black leading-[0.9] tracking-tighter uppercase mb-8 sm:mb-12 text-white">
-              I DON&apos;T OUTSOURCE.
-              <br /><span className="italic text-zinc-500">I SHOW UP.</span>
+              BUILT IN <span className="italic text-zinc-500">THE FIELD.</span>
+              <br />SCALED WITH LOGIC.
             </h2>
 
             <p className="text-body-lg text-zinc-400 font-light leading-relaxed mb-10 sm:mb-14 max-w-lg">
-              Most agencies send you a Zoom link and a Loom video. I drive to your business, sit with your team, and build the system in front of you. I&apos;m based in Dallas-Fort Worth. I&apos;ve automated 500+ businesses.{" "}
-              <span className="text-white font-medium">And I answer my own phone.</span>
+              I built this system to solve the bottlenecks in my own business. We replace human guesswork with{" "}
+              <span className="text-white font-medium">engineered consistency.</span>
             </p>
 
             {/* Quote */}
             <blockquote className="text-body text-zinc-500 italic leading-relaxed border-l-2 border-cyan-400/20 pl-5 sm:pl-8 mb-10 sm:mb-12 bg-gradient-to-r from-cyan-900/[0.04] to-transparent py-4 pr-4">
-              &ldquo;Chaos doesn&apos;t scale. Systems do. I install a digital nervous system that makes growth predictable and protects your time.&rdquo;
+              &ldquo;Chaos doesn&apos;t scale. Systems do. We install a digital nervous system that ensures growth is predictable and your time is protected.&rdquo;
             </blockquote>
 
             {/* Founder info */}

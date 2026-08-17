@@ -16,7 +16,7 @@ export const Navigation = () => {
       setScrolled(window.scrollY > 100);
 
       // Track active section
-      const sections = ["system", "services", "reviews", "audit"];
+      const sections = ["system", "manifesto", "services", "reviews", "audit"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top < window.innerHeight / 2) {

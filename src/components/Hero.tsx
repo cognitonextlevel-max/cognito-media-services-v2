@@ -109,12 +109,11 @@ export const Hero = () => {
 
           {/* Mobile fallback */}
           <div className="md:hidden">
-            <motion.div
-              role="presentation"
+            <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
-              className="font-cabinet font-black uppercase leading-[0.85] tracking-tighter text-white"
+              className="font-cabinet font-black uppercase leading-[0.85] tracking-tighter"
               style={{ fontSize: "clamp(2.8rem, 13vw, 5.5rem)" }}
             >
               <motion.span
@@ -141,7 +140,7 @@ export const Hero = () => {
               >
                 YOU TO RUN<span className="text-cyan-400 glow-text">.</span>
               </motion.span>
-            </motion.div>
+            </motion.h1>
           </div>
         </div>
 

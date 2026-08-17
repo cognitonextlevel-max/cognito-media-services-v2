@@ -6,6 +6,7 @@ import { Modules } from "@/components/Modules";
 import { Process } from "@/components/Process";
 import { Training } from "@/components/Training";
 import { Founder } from "@/components/Founder";
+import { ManifestoAndEcosystem } from "@/components/ManifestoAndEcosystem";
 import { Reviews } from "@/components/Reviews";
 import { WhatsNew } from "@/components/WhatsNew";
 import { Qualify } from "@/components/Qualify";
@@ -21,7 +22,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ScrollingMarquee
-        text="SYSTEMS · AI · SEO · WEBSITES · AUTOMATION · SCALE"
+        text="AI VOICE AGENTS · AUTOMATION · AI TRAINING · ON-SITE · STRATEGY"
         speed={30}
         variant="outline"
       />
@@ -37,11 +38,12 @@ export default function Home() {
       <Process />
       <Training />
       <Founder />
+      <ManifestoAndEcosystem />
       <Reviews />
       <WhatsNew />
       <Qualify />
       <ScrollingMarquee
-        text="DEPLOY WITH DEMARKUSS · STRATEGIC AUDIT · UNFAIR ADVANTAGE"
+        text="DEPLOY WITH DEMARKUSS · AI INSTALLATION · UNFAIR ADVANTAGE"
         speed={28}
         variant="outline"
       />

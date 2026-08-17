@@ -9,49 +9,49 @@ import Link from "next/link";
 const modules = [
   {
     number: "01",
-    title: "MAP DOMINANCE",
-    subtitle: "Local SEO",
-    description: "I put you in the top 3 Google Map results so every local search sends customers to you — not your competitor.",
-    metric: "Top 3 Rankings",
-    icon: Search,
-    featured: false,
-  },
-  {
-    number: "02",
-    title: "REVENUE ENGINE",
-    subtitle: "Website",
-    description: "Your website stops being a brochure and starts being a machine that forces visitors to take action.",
-    metric: "Conversion-Optimized",
+    title: "DIGITAL STOREFRONT",
+    subtitle: "Web Development",
+    description: "Professional, conversion-optimized websites built from scratch to establish ultimate credibility.",
+    metric: "High-Converting",
     icon: Code,
     featured: false,
   },
   {
+    number: "02",
+    title: "THE AI RECEPTIONIST",
+    subtitle: "Voice Agents",
+    description: "24/7 intelligent voice agent systems installed so you never miss a lead.",
+    metric: "Zero Missed Calls",
+    icon: Bot,
+    featured: false,
+    href: "/ai",
+  },
+  {
     number: "03",
-    title: "OPERATIONAL LOGIC",
-    subtitle: "Custom Apps",
-    description: "I automate the workflows that eat 20+ hours of your week — scheduling, invoicing, CRM, reporting.",
-    metric: "20+ Hours Saved/Week",
+    title: "BUSINESS AUTOMATION",
+    subtitle: "Workflows",
+    description: "Custom AI workflow integration to handle your invoicing, emails, and back-office chaos.",
+    metric: "20+ Hours Saved",
     icon: Cpu,
     featured: false,
   },
   {
     number: "04",
-    title: "AI SYSTEMS",
-    subtitle: "Voice + Automation",
-    description: "AI answers your phone 24/7, responds to every lead in under 60 seconds, and requests reviews automatically.",
-    metric: "Zero Missed Calls",
-    icon: Bot,
-    featured: true,
-    href: "/ai",
+    title: "LOCAL VISIBILITY",
+    subtitle: "SEO & Ads",
+    description: "We dominate Google Maps and local search so Dallas-Fort Worth traffic comes straight to you.",
+    metric: "Map Dominance",
+    icon: Search,
+    featured: false,
   },
   {
     number: "05",
-    title: "SALES AGENTS",
-    subtitle: "Follow-Up",
-    description: "Automated follow-up sequences that nurture every lead until they buy — or until they say no five times.",
-    metric: "100% Follow-Up Rate",
-    icon: Smartphone,
-    featured: false,
+    title: "AI TRAINING",
+    subtitle: "On-Site Installation",
+    description: "We physically install custom AI workflows, voice agents, and automation tools at your business, then train your entire team until they're confident.",
+    metric: "Zero Learning Curve",
+    icon: GraduationCap,
+    featured: true,
   },
 ];
 
@@ -92,9 +92,7 @@ export const Modules = () => {
         </div>
         {/* 5th module full width */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          <div className="md:col-span-2">
-            <ModuleCard mod={modules[4]} idx={4} />
-          </div>
+          <ModuleCard mod={modules[4]} idx={4} />
         </div>
 
         {/* Loop description */}
@@ -111,6 +109,14 @@ export const Modules = () => {
         </motion.div>
       </div>
 
+      <style jsx global>{`
+        @keyframes scan {
+          0% { transform: translateY(-100%); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateY(500px); opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 };
