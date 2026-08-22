@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
 import { SystemComparison } from "@/components/SystemComparison";
+import { TimeCalculator } from "@/components/TimeCalculator";
 import { AIReadiness } from "@/components/AIReadiness";
 import { Modules } from "@/components/Modules";
 import { Process } from "@/components/Process";
@@ -29,6 +30,7 @@ export default function Home() {
       />
       <Problem />
       <SystemComparison />
+      <TimeCalculator />
       <AIReadiness />
       <Modules />
       <ScrollingMarquee
