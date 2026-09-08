@@ -84,6 +84,7 @@ const jsonLd = {
       "description": "Dallas-Fort Worth tech entrepreneur, licensed low-voltage contractor, author, and AI systems architect. Founder of Cognito Media Services and DeMarkuss Day AI Systems.",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q141359747",
+        "https://www.crunchbase.com/person/demarkuss-day",
         "https://x.com/demarkuss1",
         "https://www.linkedin.com/in/demarkuss-day-a1202b20/",
         "https://www.instagram.com/demarkuss_day",
