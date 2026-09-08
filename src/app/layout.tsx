@@ -287,6 +287,7 @@ const jsonLd = {
       "isbn": "GGKEY:C6LUNZ0YR3Y",
       "url": "http://books.google.com/books/about?id=uiMKEgAAQBAJ",
       "sameAs": [
+        "https://www.wikidata.org/wiki/Q141373623",
         "http://books.google.com/books/about?id=uiMKEgAAQBAJ",
         "https://play.google.com/store/books/details?id=uiMKEgAAQBAJ"
       ],
@@ -321,6 +322,7 @@ const jsonLd = {
       "installUrl": "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
       "downloadUrl": "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
       "sameAs": [
+        "https://www.wikidata.org/wiki/Q141373583",
         "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
         "https://www.cognitomediaservice.com/app",
         "https://www.instagram.com/cognitomediaservices",
