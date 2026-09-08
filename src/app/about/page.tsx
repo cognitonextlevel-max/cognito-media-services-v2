@@ -44,7 +44,7 @@ export default function AboutPage() {
               </blockquote>
 
               <p className="text-body text-zinc-400 font-light leading-relaxed mb-6 max-w-2xl">
-                DeMarkuss Day is a Dallas-Fort Worth based systems architect, licensed low-voltage contractor, published author, and founder of Cognito Media Services and DeMarkuss Day AI Systems.
+                DeMarkuss Day is a Dallas-Fort Worth based systems architect, licensed low-voltage contractor, iOS software creator, published author, and founder of Cognito Media Services and DeMarkuss Day AI Systems.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -53,6 +53,14 @@ export default function AboutPage() {
                   className="px-6 py-3 bg-cyan-400 text-black font-mono text-caption uppercase tracking-widest font-bold hover:bg-cyan-300 transition-colors shadow-[0_0_20px_rgba(0,255,255,0.3)]"
                 >
                   Read The Manifesto
+                </Link>
+                <Link
+                  href="https://www.cognitomediaservice.com/app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-zinc-800 bg-zinc-950 text-cyan-400 font-mono text-caption uppercase tracking-widest hover:border-cyan-400/40 transition-colors flex items-center gap-2"
+                >
+                  <Smartphone size={14} className="text-cyan-400" /> Cognito iOS App <ExternalLink size={14} />
                 </Link>
                 <Link
                   href="https://cognitomediaservice.com"

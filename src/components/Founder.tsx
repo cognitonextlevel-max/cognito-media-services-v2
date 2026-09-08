@@ -84,9 +84,30 @@ export const Founder = () => {
                 <span className="block text-white font-cabinet font-bold uppercase tracking-[0.15em] text-subheading leading-none mb-1.5">
                   DeMarkuss Day
                 </span>
-                <span className="block text-micro font-mono text-zinc-600 uppercase tracking-[0.35em] font-bold">
+                <span className="block text-micro font-mono text-zinc-600 uppercase tracking-[0.35em] font-bold mb-3">
                   Business Systems Architect · Dallas, TX
                 </span>
+                <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-zinc-900">
+                  <a
+                    href="https://apps.apple.com/us/app/cognito-media-services-av/id6762090713"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1.5"
+                  >
+                    <span>iOS App Creator</span>
+                    <span className="text-zinc-600">·</span>
+                    <span className="text-zinc-400">App Store Verified</span>
+                  </a>
+                  <span className="text-zinc-700 hidden sm:inline">|</span>
+                  <a
+                    href="https://cognitomediaservice.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 hover:text-white transition-colors"
+                  >
+                    Founder: Cognito Media Services
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

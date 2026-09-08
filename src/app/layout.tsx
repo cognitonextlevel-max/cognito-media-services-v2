@@ -73,6 +73,7 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://www.demarkussday.com/#person",
       "name": "DeMarkuss Day",
+      "alternateName": ["Demarkuss Day", "DeMarkus Day"],
       "givenName": "DeMarkuss",
       "familyName": "Day",
       "url": "https://www.demarkussday.com",
@@ -82,6 +83,7 @@ const jsonLd = {
       "jobTitle": "AI Systems Architect, Founder & Author",
       "description": "Dallas-Fort Worth tech entrepreneur, licensed low-voltage contractor, author, and AI systems architect. Founder of Cognito Media Services and DeMarkuss Day AI Systems.",
       "sameAs": [
+        "https://www.wikidata.org/wiki/Q141359747",
         "https://x.com/demarkuss1",
         "https://www.linkedin.com/in/demarkuss-day-a1202b20/",
         "https://www.instagram.com/demarkuss_day",
@@ -90,7 +92,9 @@ const jsonLd = {
         "https://github.com/cognitonextlevel-max",
         "https://www.facebook.com/cognitomediaservices",
         "https://www.youtube.com/@CognitoMediaServices",
-        "https://apps.apple.com/us/app/cognito-media-services/id6451157247",
+        "https://apps.apple.com/developer/demarkuss-day",
+        "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
+        "https://www.cognitomediaservice.com/app",
         "https://shoutoutdfw.com/meet-demarkuss-day-smart-home-specialist-founder-cognito-media-services/",
         "https://shoutoutdfw.com/meet-demarkuss-day-founder-and-ceo-of-cognito-media-services/",
         "https://cognitomediaservice.com"
@@ -98,6 +102,13 @@ const jsonLd = {
       "founder": [
         { "@id": "https://www.demarkussday.com/#organization" },
         { "@id": "https://cognitomediaservice.com/#business" }
+      ],
+      "creator": [
+        { "@id": "https://www.cognitomediaservice.com/app#mobileapp" }
+      ],
+      "author": [
+        { "@id": "https://www.demarkussday.com/#book-tv-mounting" },
+        { "@id": "https://www.demarkussday.com/#book-luma" }
       ],
       "knowsAbout": [
         "Artificial Intelligence Implementation",
@@ -107,7 +118,9 @@ const jsonLd = {
         "Smart Home Automation",
         "Commercial Audio Video Engineering",
         "Next.js Full-Stack Web Development",
-        "Structured Low-Voltage Cabling"
+        "Structured Low-Voltage Cabling",
+        "iOS Mobile Application Engineering",
+        "Mobile App Architecture"
       ]
     },
     {
@@ -236,7 +249,8 @@ const jsonLd = {
         "https://www.tiktok.com/@cognitomediaservices",
         "https://www.tiktok.com/@demarkuss_day",
         "https://demarkussday.substack.com",
-        "https://apps.apple.com/us/app/cognito-media-services/id6451157247",
+        "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
+        "https://www.cognitomediaservice.com/app",
         "https://www.yelp.com/biz/cognito-media-services-farmers-branch-3",
         "https://nextdoor.com/pages/cognito-media-services-dallas-tx-1/",
         "https://www.yellowpages.com/dallas-tx/mip/cognito-media-services-564552979",
@@ -274,14 +288,42 @@ const jsonLd = {
       "description": "An interactive framework designed to transform mindsets and drive tangible achievement through the four pillars: Learn, Understand, Master, and Achieve."
     },
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://cognitomediaservice.com/#app-ios",
-      "name": "Cognito Media Services Client App (iOS)",
-      "operatingSystem": "iOS",
-      "applicationCategory": "BusinessApplication",
-      "installUrl": "https://apps.apple.com/us/app/cognito-media-services/id6451157247",
+      "@type": "MobileApplication",
+      "@id": "https://www.cognitomediaservice.com/app#mobileapp",
+      "name": "Cognito Media Services",
+      "alternateName": "Cognito Media Services AV",
+      "operatingSystem": "iOS 17.0 or later",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Home services booking",
+      "url": "https://www.cognitomediaservice.com/app",
+      "installUrl": "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
+      "downloadUrl": "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
+      "sameAs": [
+        "https://apps.apple.com/us/app/cognito-media-services-av/id6762090713",
+        "https://www.cognitomediaservice.com/app",
+        "https://www.instagram.com/cognitomediaservices",
+        "https://www.facebook.com/cognitomediaservices"
+      ],
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "countriesSupported": "US",
       "author": { "@id": "https://www.demarkussday.com/#person" },
-      "description": "Client mobile application for booking smart home services, tracking installation milestones in real time, and managing hardware."
+      "publisher": { "@id": "https://www.demarkussday.com/#organization" },
+      "description": "Official iOS application for booking Dallas–Fort Worth TV mounting, home theater calibration, smart home automation, and 4K security camera installations. Features an AI Install Advisor, real-time 6-milestone project tracking, and instant dispatch.",
+      "featureList": [
+        "Instant 5-step booking for Dallas–Fort Worth TV mounting, wire concealment, and smart home AV",
+        "Built-in AI Install Advisor for technical clearance, mantel heights, and cable layout verification",
+        "Real-time live project progress tracking through 6 verified milestones",
+        "Direct Cognito crew dispatch with zero subcontracted gig workers",
+        "Upfront guaranteed pricing with payment due only upon verified installation completion",
+        "Comprehensive DFW service across Dallas, Fort Worth, Plano, Frisco, Southlake, McKinney, and Park Cities"
+      ],
+      "screenshot": [
+        "https://www.cognitomediaservice.com/images/app/cognito-app-home.png",
+        "https://www.cognitomediaservice.com/images/app/cognito-app-booking.png",
+        "https://www.cognitomediaservice.com/images/app/cognito-install-advisor.png",
+        "https://www.cognitomediaservice.com/images/app/cognito-project-tracking.png"
+      ]
     }
   ]
 };

@@ -50,8 +50,13 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://apps.apple.com/us/app/cognito-media-services/id6451157247" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-500 flex items-center gap-1.5">
-                  Cognito iOS App <ExternalLink size={12} />
+                <Link href="https://apps.apple.com/us/app/cognito-media-services-av/id6762090713" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-500 flex items-center gap-1.5">
+                  Cognito iOS App (App Store) <ExternalLink size={12} />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.cognitomediaservice.com/app" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-500 flex items-center gap-1.5">
+                  Cognito App Portal <ExternalLink size={12} />
                 </Link>
               </li>
               <li>

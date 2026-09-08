@@ -220,12 +220,20 @@ export const ManifestoAndEcosystem = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="https://apps.apple.com/us/app/cognito-media-services/id6451157247"
+                  href="https://apps.apple.com/us/app/cognito-media-services-av/id6762090713"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-zinc-900 border border-zinc-800 hover:border-cyan-400/40 text-caption font-mono uppercase tracking-widest text-white transition-all flex items-center gap-2"
                 >
                   <Smartphone size={16} className="text-cyan-400" /> Apple App Store <ArrowUpRight size={14} />
+                </Link>
+                <Link
+                  href="https://www.cognitomediaservice.com/app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-zinc-900 border border-zinc-800 hover:border-cyan-400/40 text-caption font-mono uppercase tracking-widest text-cyan-400 transition-all flex items-center gap-2"
+                >
+                  <Smartphone size={16} className="text-cyan-400" /> Cognito App Portal <ArrowUpRight size={14} />
                 </Link>
                 <Link
                   href="https://cognitomediaservice.com"
