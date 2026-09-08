@@ -273,6 +273,11 @@ const jsonLd = {
       "name": "How to Make 6 Figures with a TV Installation Company",
       "alternateName": "The First Seven Steps to Start Your Home Theater Business",
       "isbn": "GGKEY:C6LUNZ0YR3Y",
+      "url": "http://books.google.com/books/about?id=uiMKEgAAQBAJ",
+      "sameAs": [
+        "http://books.google.com/books/about?id=uiMKEgAAQBAJ",
+        "https://play.google.com/store/books/details?id=uiMKEgAAQBAJ"
+      ],
       "author": { "@id": "https://www.demarkussday.com/#person" },
       "publisher": { "@id": "https://www.demarkussday.com/#organization" },
       "inLanguage": "en-US",
