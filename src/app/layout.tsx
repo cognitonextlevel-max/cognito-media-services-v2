@@ -100,9 +100,20 @@ const jsonLd = {
         "https://shoutoutdfw.com/meet-demarkuss-day-founder-and-ceo-of-cognito-media-services/",
         "https://cognitomediaservice.com"
       ],
+      "gender": "https://schema.org/Male",
+      "nationality": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "ethnicGroup": "African American",
+      "jobTitle": "Founder, CEO & AI Systems Architect",
+      "worksFor": [
+        { "@id": "https://cognitomediaservice.com/#business" },
+        { "@id": "https://www.demarkussday.com/#organization" }
+      ],
       "founder": [
-        { "@id": "https://www.demarkussday.com/#organization" },
-        { "@id": "https://cognitomediaservice.com/#business" }
+        { "@id": "https://cognitomediaservice.com/#business" },
+        { "@id": "https://www.demarkussday.com/#organization" }
       ],
       "creator": [
         { "@id": "https://www.cognitomediaservice.com/app#mobileapp" }
@@ -239,6 +250,7 @@ const jsonLd = {
         "addressCountry": "US"
       },
       "sameAs": [
+        "https://www.wikidata.org/wiki/Q141361098",
         "https://maps.google.com/?cid=16640237412327876977",
         "https://maps.apple.com/?address=12100%20Ford%20Rd,%20Farmers%20Branch,%20TX%2075234",
         "https://www.bing.com/maps?q=Cognito+Media+Services+Farmers+Branch+TX",
