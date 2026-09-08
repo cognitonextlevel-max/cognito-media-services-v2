@@ -271,10 +271,14 @@ const jsonLd = {
       "@type": "Book",
       "@id": "https://www.demarkussday.com/#book-tv-mounting",
       "name": "How to Make 6 Figures with a TV Installation Company",
+      "alternateName": "The First Seven Steps to Start Your Home Theater Business",
+      "isbn": "GGKEY:C6LUNZ0YR3Y",
       "author": { "@id": "https://www.demarkussday.com/#person" },
+      "publisher": { "@id": "https://www.demarkussday.com/#organization" },
       "inLanguage": "en-US",
-      "genre": "Business & Money / Trade Entrepreneurship",
-      "description": "A comprehensive blueprint detailing how technicians can price, market, and scale a six-figure television mounting and smart integration business."
+      "bookFormat": "https://schema.org/EBook",
+      "genre": "Business & Economics / Entrepreneurship",
+      "description": "A comprehensive operational blueprint and guide detailing how technicians and entrepreneurs can price, market, bid on commercial contracts, and scale a six-figure television mounting and home theater enterprise."
     },
     {
       "@type": "Book",
